@@ -5,7 +5,9 @@ import './index.css'
 export default class BlogIndex extends Component {
     render() {
         return (
-            <div></div>
+            <div>
+                blog index
+            </div>
         )
     }
 }
