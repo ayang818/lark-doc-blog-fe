@@ -5,10 +5,30 @@ import Article from '../../component/Article';
 import { getChildrenNodes, getNodeContent } from '../../api'
 
 export default class BlogIndex extends Component {
+    state = {
+        articles: []
+    }
 
     componentDidMount() {
         getChildrenNodes().then(
-            resp => {console.log(resp.data)},
+            resp => {
+                console.log(resp.data)
+                let articles = resp.data.children
+                // fetch every node detail, include create time, then order desc
+                for (let article of articles) {
+                    getNodeContent(article.wiki_token).then(
+                        articleDetailResp => {
+                            let articleDetail = articleDetailResp.data
+                            let revision = articleDetail.revision
+                            let content = articleDetail.content
+                            console.log(content, revision)
+                        },
+                        err1 => {
+                            console.log(err1)
+                        }
+                    )
+                }
+            },
             err => {console.log(err)}
         )
     }

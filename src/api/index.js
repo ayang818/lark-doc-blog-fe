@@ -7,6 +7,7 @@ export const  getChildrenNodes = async (parentToken='default') => {
 }
 
 
-export const getNodeContent = (docToken) => {
-
+export const getNodeContent = async (docToken) => {
+    let resp = await axios.get(`/doc/${docToken}`)
+    return resp
 }
