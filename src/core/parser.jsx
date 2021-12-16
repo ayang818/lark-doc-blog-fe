@@ -1,5 +1,7 @@
 import Text from '../component/Typography/Text'
 import Title from '../component/Typography/Title'
+import Paragraph from '../component/Typography/Paragraph'
+import { v4 as uuidv4 } from 'uuid';
 
 const paragraph = (block) => {
     let detail = block.paragraph
@@ -10,17 +12,18 @@ const paragraph = (block) => {
         let eleParser = blockParserMap[type]
         if (!eleParser) continue
         // collect all created vdom
-        vdoms.push(eleParser(elementBlock))
+        vdoms.push(eleParser(elementBlock[type]))
     }
-    return <div>{vdoms.map((vdom) => vdom)}</div>
+    console.log(vdoms)
+    return <Paragraph key={uuidv4()}>{vdoms}</Paragraph>
 }
 
 const textRun = (block) => {
     let {text, style} = block
-    console.log(text, style)
+    // console.log('text=', text, ';style=', style)
     // TODO use enum class or 
     // final: inner style
-    return <Text style={{}}>{text}</Text>
+    return <Text key={uuidv4()}>{text}</Text>
 }
 
 const styleParserMap = {
@@ -37,7 +40,7 @@ const parseBlock = (block) => {
     let {type} = block
     let parser = blockParserMap[type]
     if (!parser) return <div></div>
-    console.log(type, 'parser mapped')
+    // console.log(type, 'parser mapped')
     return parser(block)
 }
 
@@ -48,7 +51,7 @@ export const parseBody = (all) => {
     for (let block of blocks) {
         vdoms.push(parseBlock(block))
     }
-    return <div>{vdoms.map(item => item)}</div>
+    return <div>{vdoms}</div>
 } 
 
 export const parseTitle = (all) => {

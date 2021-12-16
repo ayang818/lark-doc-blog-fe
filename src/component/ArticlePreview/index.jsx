@@ -20,14 +20,12 @@ class ArticlePreview extends Component {
     static defaultProps = {
         article: {}
     }
-    
+
     componentDidMount() {
         const {article} = this.props
         const {id:wikiToken} = article
-        let titleParsed = parseTitle(article)
-        this.setState({title: titleParsed})
-        // console.log('parse article res;', parse(article))
-        ReactDOM.render(titleParsed, document.getElementById(wikiToken))
+        let bodyVdom = parseBody(article)
+        // ReactDOM.render(bodyVdom, document.getElementById('body'+wikiToken))
     }
 
     // render 次数多
@@ -37,15 +35,24 @@ class ArticlePreview extends Component {
         const {article} = this.props
         const {id:wikiToken} = article
         console.log('article prop=', article)
+        let titleVdom = parseTitle(article)
+        let bodyVdom = parseBody(article)
+        console.log(titleVdom)
         return (
             <div className='article-border'>
                 <Row >
                     <Col span={0}></Col>
                     <Col span={24}>
-                        <div id={wikiToken}>
+                        <div className='prev-title'>
+                            {
+                                titleVdom
+                            }
                         </div>
-                        <Paragraph spacing='extended'>
-                        </Paragraph>
+                        <div className='prev-body' id={'body'+wikiToken}>
+                            {
+                                bodyVdom
+                            }
+                        </div>
                     </Col>
                     <Col span={0}></Col>
                 </Row>
