@@ -1,0 +1,4 @@
+.article-border {
+    padding: 20px 0 20px 0;
+    border-bottom: 0.5px solid rgba(var(--semi-grey-1), 1);
+}
