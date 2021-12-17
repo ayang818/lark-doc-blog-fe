@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 
-export default class Title extends Component {
+export default class OLTitle extends Component {
     static propTypes = {
         heading: PropTypes.number
     }

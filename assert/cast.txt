@@ -1,0 +1,19 @@
+======================== paragraph
+quote = true
+headingLevel = 1
+align = center
+align = left
+headingLevel = 1
+list = {type: 'number', indentLevel: 1, number: 1}
+list = {type: 'number', indentLevel: 1, number: 2}
+list = {type: 'number', indentLevel: 2, number: 1}
+list = {type: 'number', indentLevel: 2, number: 2}
+list = {type: 'number', indentLevel: 1, number: 3}
+list = {type: 'number', indentLevel: 1, number: 4}
+align = center
+======================== paragraph
+
+
+======================== textRun
+backColor
+======================== textRun

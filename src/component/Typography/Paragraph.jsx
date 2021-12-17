@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Typography } from '@douyinfe/semi-ui'
 
-export default class Paragraph extends Component {
+export default class OLParagraph extends Component {
     render() {
         const { Paragraph } = Typography
         return (

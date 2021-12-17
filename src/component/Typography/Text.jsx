@@ -1,11 +1,11 @@
 import { Typography, Row, Col } from '@douyinfe/semi-ui'
 import React, { Component } from 'react'
 
-export default class Text extends Component {
+export default class OLText extends Component {
     render() {
-        // const { Text } = Typography
+        const { Text } = Typography
         return (
-            <div>
+            <div key={this.props.key}>
                 <Text {...this.props}></Text>
             </div>
         )
