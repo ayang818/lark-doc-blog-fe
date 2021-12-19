@@ -6,7 +6,7 @@ import './articlePreview.css'
 import { parseBody, parseTitle } from '../../core/parser';
 import ReactDOM from 'react-dom'
 
-
+// todo fix preview 不展示具体信息
 class ArticlePreview extends Component {
 
     state = {

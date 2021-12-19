@@ -3,6 +3,7 @@
 // import OLParagraph from '../component/Typography/Paragraph'
 import { v4 as uuidv4 } from 'uuid';
 import { Typography } from '@douyinfe/semi-ui'
+import ImageShow from '../component/Typography/ImageShow';
 // TODO 如何封装一个组件
 const {Text:OLText, Title:OLTitle, Paragraph:OLParagraph} = Typography
 
@@ -14,7 +15,7 @@ const componentNameCast = {
         for (let child of children) {
             content += child.props.children
         }
-        return <OLTitle style={{fontSize: '1.5rem'}}>{content}</OLTitle>
+        return <OLTitle style={{fontSize: `${1 + 0.6/props.heading}rem`}}>{content}</OLTitle>
     }
 }
 
@@ -56,6 +57,17 @@ const textRun = (block) => {
     return <OLText key={uuidv4()}>{text}</OLText>
 }
 
+const gallery = (block) => {
+    let {gallery:{imageList}} = block
+    if (!imageList || imageList.length == 0) return <div></div>
+    let vdoms = []
+    for (let image of imageList) {
+        let {fileToken, width, height} = image
+        vdoms.push(<ImageShow key={uuidv4()} fileToken={fileToken} width={width} height={height}></ImageShow>)
+    } 
+    return <div key={uuidv4()}>{vdoms}</div>
+}
+
 const styleTypeParserDict = {
     quote: (isQuote) => ({
         style: {
@@ -93,7 +105,8 @@ const styleTypeParser = (styleType, styleTypeValue) => {
 
 const blockParserDict = {
     paragraph,
-    textRun
+    textRun,
+    gallery
 }
 
 const parseBlock = (block) => {
@@ -111,7 +124,7 @@ export const parseBody = (all) => {
     for (let block of blocks) {
         vdoms.push(parseBlock(block))
     }
-    return <div>{vdoms}</div>
+    return <div key={uuidv4()}>{vdoms}</div>
 } 
 
 export const parseTitle = (all) => {
@@ -123,5 +136,5 @@ export const parseTitle = (all) => {
         let {textRun:{text}} = element
         title += text
     }
-    return <OLTitle heading={2}>{title}</OLTitle>
+    return <OLTitle key={uuidv4()} heading={2}>{title}</OLTitle>
 }
