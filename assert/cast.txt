@@ -17,3 +17,6 @@ align = center
 ======================== textRun
 backColor
 ======================== textRun
+
+
+{\"type\":\"code\",\"code\":{\"language\":\"JavaScript\",\"location\":{\"zoneId\":\"0\",\"startIndex\":555,\"endIndex\":556},\"zoneId\":\"u4gkco3bsq\",\"body\":{\"blocks\":[{\"type\":\"paragraph\",\"paragraph\":{\"elements\":[{\"type\":\"textRun\",\"textRun\":{\"text\":\"console.log('hello world')\",\"style\":{},\"location\":{\"zoneId\":\"u4gkco3bsq\",\"startIndex\":0,\"endIndex\":26}}}],\"location\":{\"zoneId\":\"u4gkco3bsq\",\"startIndex\":0,\"endIndex\":26},\"lineId\":\"SZXinJ\"}}]}}}

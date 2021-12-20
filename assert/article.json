@@ -1,19 +1,17 @@
 {
     "title": {
-        "elements": [
-            {
-                "type": "textRun",
-                "textRun": {
-                    "text": "困扰一年的前端问题排查经历",
-                    "style": {},
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 1,
-                        "endIndex": 14
-                    }
+        "elements": [{
+            "type": "textRun",
+            "textRun": {
+                "text": "困扰一年的前端问题排查经历",
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 1,
+                    "endIndex": 14
                 }
             }
-        ],
+        }],
         "style": {
             "align": "center"
         },
@@ -25,1059 +23,994 @@
         "lineId": "U8VNtG"
     },
     "body": {
-        "blocks": [
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "post=0&tag=[\"tingle\"]",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 16,
-                                    "endIndex": 37
-                                }
-                            }
+        "blocks": [{
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "post=0\u0026tag=[\"tingle\"]",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 16,
+                            "endIndex": 37
                         }
-                    ],
-                    "style": {
-                        "quote": true
-                    },
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 15,
-                        "endIndex": 37
-                    },
-                    "lineId": "JXrMS5"
-                }
-            },
-            {
-                "type": "callout",
-                "callout": {
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 38,
-                        "endIndex": 39
-                    },
-                    "calloutEmojiId": "round_pushpin",
-                    "calloutBackgroundColor": {
-                        "red": 255,
-                        "green": 245,
-                        "blue": 235,
-                        "alpha": 1
-                    },
-                    "calloutBorderColor": {
-                        "red": 254,
-                        "green": 212,
-                        "blue": 164,
-                        "alpha": 1
-                    },
-                    "zoneId": "056weuwrpj",
-                    "body": {
-                        "blocks": [
-                            {
-                                "type": "paragraph",
-                                "paragraph": {
-                                    "elements": [
-                                        {
-                                            "type": "textRun",
-                                            "textRun": {
-                                                "text": "bug不复杂，解决了就很开心~",
-                                                "style": {},
-                                                "location": {
-                                                    "zoneId": "056weuwrpj",
-                                                    "startIndex": 1,
-                                                    "endIndex": 16
-                                                }
-                                            }
-                                        }
-                                    ],
+                    }
+                }],
+                "style": {
+                    "quote": true
+                },
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 15,
+                    "endIndex": 37
+                },
+                "lineId": "JXrMS5"
+            }
+        }, {
+            "type": "callout",
+            "callout": {
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 38,
+                    "endIndex": 39
+                },
+                "calloutEmojiId": "wink",
+                "calloutBackgroundColor": {
+                    "red": 254,
+                    "green": 241,
+                    "blue": 241,
+                    "alpha": 1
+                },
+                "calloutBorderColor": {
+                    "red": 251,
+                    "green": 191,
+                    "blue": 188,
+                    "alpha": 1
+                },
+                "zoneId": "056weuwrpj",
+                "body": {
+                    "blocks": [{
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "bug不复杂，解决了就很开心~",
                                     "style": {},
                                     "location": {
                                         "zoneId": "056weuwrpj",
-                                        "startIndex": 0,
+                                        "startIndex": 1,
                                         "endIndex": 16
-                                    },
-                                    "lineId": "h3o4tT"
-                                }
-                            }
-                        ]
-                    }
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "问题伊始",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 41,
-                                    "endIndex": 45
-                                }
-                            }
-                        }
-                    ],
-                    "style": {
-                        "headingLevel": 1
-                    },
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 40,
-                        "endIndex": 45
-                    },
-                    "lineId": "SZbKoY"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "这个问题其实已经影响我非常长的时间了。我最常用的网站 ",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 47,
-                                    "endIndex": 74
-                                }
-                            }
-                        },
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "飞书文档",
-                                "style": {
-                                    "backColor": {
-                                        "red": 255,
-                                        "green": 246,
-                                        "blue": 122,
-                                        "alpha": 0.8
                                     }
-                                },
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 74,
-                                    "endIndex": 78
                                 }
-                            }
-                        },
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": " 从我第一次使用开始就会时不时出现一些小 bug。例如某个文档页面前端会出现一些莫名奇妙的滚动条，但是过几秒钟就会消失，页面就会变得正常，所以也不算很影响体验。",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 78,
-                                    "endIndex": 158
-                                }
-                            }
+                            }],
+                            "style": {},
+                            "location": {
+                                "zoneId": "056weuwrpj",
+                                "startIndex": 0,
+                                "endIndex": 16
+                            },
+                            "lineId": "h3o4tT"
                         }
-                    ],
-                    "style": {},
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 46,
-                        "endIndex": 158
-                    },
-                    "lineId": "eQaaPA"
-                }
-            },
-            {
-                "type": "gallery",
-                "gallery": {
-                    "galleryStyle": {},
-                    "imageList": [
-                        {
-                            "fileToken": "boxcnosU1A2yyZyz6Oqul2VRtad",
-                            "width": 1808,
-                            "height": 952
-                        }
-                    ],
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 159,
-                        "endIndex": 161
-                    }
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "但不知道飞书文档哪次更新后，我的飞书文档连整个文档界面都开始不断抖动，不过还算能用，我想着可能是飞书文档的前端 RD 某次上线上了一堆 feature（bug）上去吧，过两天可能就 bugfix 了。但是飞书文档界面用它一次次不停地抖动，倔强的告诉我，“我就是有 bug，你来打我呀😒”。好吧，我忍了。",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 163,
-                                    "endIndex": 315
-                                }
-                            }
-                        }
-                    ],
-                    "style": {},
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 162,
-                        "endIndex": 315
-                    },
-                    "lineId": "muhAcz"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "直到今天，文档基本上彻底不可用了，抖动地幅度越来越来，看的我简直眼花。并且鼠标光标碰到评论按钮，界面就会直接崩溃。",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 317,
-                                    "endIndex": 374
-                                }
-                            }
-                        }
-                    ],
-                    "style": {},
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 316,
-                        "endIndex": 374
-                    },
-                    "lineId": "FsigYb"
-                }
-            },
-            {
-                "type": "file",
-                "file": {
-                    "fileToken": "boxcnp6WKYfB6QkUr4js5xZd9qh",
-                    "viewType": "preview",
-                    "fileName": "2021-11-17_19-41-31.mp4",
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 375,
-                        "endIndex": 376
-                    }
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "（复现视频）",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 378,
-                                    "endIndex": 384
-                                }
-                            }
-                        }
-                    ],
-                    "style": {
-                        "align": "center"
-                    },
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 377,
-                        "endIndex": 384
-                    },
-                    "lineId": "PIpuEE"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "飞书文档崩了，我也蚌埠住了。在询问女朋友打开这个文档是否正常而得到肯定回复地时候。我开始排查起了这个诡异的 bug。",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 386,
-                                    "endIndex": 444
-                                }
-                            }
-                        }
-                    ],
-                    "style": {
-                        "align": "left"
-                    },
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 385,
-                        "endIndex": 444
-                    },
-                    "lineId": "riIpuI"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [],
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 445,
-                        "endIndex": 445
-                    },
-                    "lineId": "n787p6"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "过程",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 447,
-                                    "endIndex": 449
-                                }
-                            }
-                        }
-                    ],
-                    "style": {
-                        "headingLevel": 1
-                    },
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 446,
-                        "endIndex": 449
-                    },
-                    "lineId": "PyvQrD"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "作为一名工程师，找 bug 之前首先肯定需要先枚举一些犯罪嫌疑人。",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 451,
-                                    "endIndex": 484
-                                }
-                            }
-                        }
-                    ],
-                    "style": {},
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 450,
-                        "endIndex": 484
-                    },
-                    "lineId": "5ZTVnO"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "飞书文档的前端报错。",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 486,
-                                    "endIndex": 496
-                                }
-                            }
-                        }
-                    ],
-                    "style": {
-                        "list": {
-                            "type": "number",
-                            "indentLevel": 1,
-                            "number": 1
-                        }
-                    },
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 485,
-                        "endIndex": 496
-                    },
-                    "lineId": "D3PH83"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "我的浏览器问题",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 498,
-                                    "endIndex": 505
-                                }
-                            }
-                        }
-                    ],
-                    "style": {
-                        "list": {
-                            "type": "number",
-                            "indentLevel": 1,
-                            "number": 2
-                        }
-                    },
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 497,
-                        "endIndex": 505
-                    },
-                    "lineId": "S8XblF"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "浏览器版本",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 507,
-                                    "endIndex": 512
-                                }
-                            }
-                        }
-                    ],
-                    "style": {
-                        "list": {
-                            "type": "number",
-                            "indentLevel": 2,
-                            "number": 1
-                        }
-                    },
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 506,
-                        "endIndex": 512
-                    },
-                    "lineId": "7tgp5t"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "浏览器缓存",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 514,
-                                    "endIndex": 519
-                                }
-                            }
-                        }
-                    ],
-                    "style": {
-                        "list": {
-                            "type": "number",
-                            "indentLevel": 2,
-                            "number": 2
-                        }
-                    },
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 513,
-                        "endIndex": 519
-                    },
-                    "lineId": "V514rE"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "我的显示器和我的笔记本分辨率配合得不是很好",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 521,
-                                    "endIndex": 542
-                                }
-                            }
-                        }
-                    ],
-                    "style": {
-                        "list": {
-                            "type": "number",
-                            "indentLevel": 1,
-                            "number": 3
-                        }
-                    },
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 520,
-                        "endIndex": 542
-                    },
-                    "lineId": "A35Fhd"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "玄学",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 544,
-                                    "endIndex": 546
-                                }
-                            }
-                        }
-                    ],
-                    "style": {
-                        "list": {
-                            "type": "number",
-                            "indentLevel": 1,
-                            "number": 4
-                        }
-                    },
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 543,
-                        "endIndex": 546
-                    },
-                    "lineId": "torvqd"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [],
-                    "style": {},
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 547,
-                        "endIndex": 548
-                    },
-                    "lineId": "iSs71P"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "出于对老东家产品的信任，首先看第一点，飞书文档前端抛出来的错",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 550,
-                                    "endIndex": 580
-                                }
-                            }
-                        }
-                    ],
-                    "style": {},
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 549,
-                        "endIndex": 580
-                    },
-                    "lineId": "HUOcrL"
-                }
-            },
-            {
-                "type": "gallery",
-                "gallery": {
-                    "galleryStyle": {},
-                    "imageList": [
-                        {
-                            "fileToken": "boxcnct96P1cbuXCbOOoaEPITTU",
-                            "width": 1808,
-                            "height": 952
-                        }
-                    ],
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 581,
-                        "endIndex": 583
-                    }
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "Error: Minified React error #185; 咱也看不懂这种前端报错，贴到 Google 看 issue。",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 584,
-                                    "endIndex": 648
-                                }
-                            }
-                        }
-                    ],
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 584,
-                        "endIndex": 648
-                    },
-                    "lineId": "QwzwbR"
-                }
-            },
-            {
-                "type": "undefinedBlock",
-                "undefinedBlock": {
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 649,
-                        "endIndex": 651
-                    }
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "看到一条貌似有点像原因的 reply",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 652,
-                                    "endIndex": 670
-                                }
-                            }
-                        }
-                    ],
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 652,
-                        "endIndex": 670
-                    },
-                    "lineId": "zIqCGs"
-                }
-            },
-            {
-                "type": "gallery",
-                "gallery": {
-                    "galleryStyle": {},
-                    "imageList": [
-                        {
-                            "fileToken": "boxcn3KUwOkpSnq4QoueGgLqQ2f",
-                            "width": 1189,
-                            "height": 342
-                        }
-                    ],
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 671,
-                        "endIndex": 673
-                    }
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "意思是 setState 这个函数被放到 React 生命周期hook 中的 componentDidUpdate 函数里面了。而 componentDidUpdate 又会在每个 setState 调用时触发，这样无穷递归循环下去，导致调用栈深度超出浏览器限制。 好有道理啊！",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 674,
-                                    "endIndex": 813
-                                }
-                            }
-                        }
-                    ],
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 674,
-                        "endIndex": 813
-                    },
-                    "lineId": "pUkWDr"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "应该是问题导致的原因了，然而并没有啥用呀，没法定位到具体地方，也没法帮我解决问题。我放弃了第一个嫌疑人。",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 815,
-                                    "endIndex": 867
-                                }
-                            }
-                        }
-                    ],
-                    "style": {},
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 814,
-                        "endIndex": 867
-                    },
-                    "lineId": "X8sNZz"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "第二个第三个嫌疑人也很好验证。清浏览器缓存，换一个浏览器，拔掉显示器.... 这些操作我都尝试一下，问题依然没有得到解决。总不能是玄学吧🤐？",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 869,
-                                    "endIndex": 940
-                                }
-                            }
-                        }
-                    ],
-                    "style": {},
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 868,
-                        "endIndex": 940
-                    },
-                    "lineId": "JdFC3S"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [],
-                    "style": {},
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 941,
-                        "endIndex": 942
-                    },
-                    "lineId": "ulrqwY"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "排查问题是需要方法的，别人用我的账号登录飞书文档没有这个问题，但我的所有电脑的浏览器都有这个问题。其实到这了就是一个在我的几台电脑中找相同，在我的电脑和别人的电脑之间找相同的游戏了。",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 944,
-                                    "endIndex": 1035
-                                }
-                            }
-                        }
-                    ],
-                    "style": {},
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 943,
-                        "endIndex": 1035
-                    },
-                    "lineId": "5Ocnag"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "我的几台电脑的浏览器的共同之处？我的 chrome 会同步我的所有的 chrome extension 呀！想到这了，其实我心里基本上已经有了答案了。我之前其实就写过一个 chrome extension",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 1037,
-                                    "endIndex": 1139
-                                }
-                            }
-                        }
-                    ],
-                    "style": {},
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 1036,
-                        "endIndex": 1139
-                    },
-                    "lineId": "CwmLvi"
-                }
-            },
-            {
-                "type": "undefinedBlock",
-                "undefinedBlock": {
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 1140,
-                        "endIndex": 1142
-                    }
-                }
-            },
-            {
-                "type": "gallery",
-                "gallery": {
-                    "galleryStyle": {},
-                    "imageList": [
-                        {
-                            "fileToken": "boxcnZEHVyiq6zzuewU0aciRqth",
-                            "width": 1807,
-                            "height": 1080
-                        }
-                    ],
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 1143,
-                        "endIndex": 1145
-                    }
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "其中有个 bug 就是",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 1147,
-                                    "endIndex": 1158
-                                }
-                            }
-                        },
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": " extension 的全局 css 导致网页显示出错",
-                                "style": {
-                                    "backColor": {
-                                        "red": 255,
-                                        "green": 246,
-                                        "blue": 122,
-                                        "alpha": 0.8
-                                    }
-                                },
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 1158,
-                                    "endIndex": 1185
-                                }
-                            }
-                        },
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "。在经过对我的所有 chrome extension 进行二分搜索排查后，定位到是",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 1185,
-                                    "endIndex": 1226
-                                }
-                            }
-                        }
-                    ],
-                    "style": {},
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 1146,
-                        "endIndex": 1226
-                    },
-                    "lineId": "odCpsM"
-                }
-            },
-            {
-                "type": "gallery",
-                "gallery": {
-                    "galleryStyle": {},
-                    "imageList": [
-                        {
-                            "fileToken": "boxcn1LD3LkbmULWRvoR8Zp0WWf",
-                            "width": 1808,
-                            "height": 952
-                        }
-                    ],
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 1227,
-                        "endIndex": 1229
-                    }
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "这个 百度划词翻译 插件的问题。（想不到你这个白白胖胖的百度翻译插件还会做这种事情😵",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 1230,
-                                    "endIndex": 1273
-                                }
-                            }
-                        }
-                    ],
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 1230,
-                        "endIndex": 1273
-                    },
-                    "lineId": "82nHyy"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "解法很简单，直接禁用这个插件即可。我终于又能享受飞书文档丝滑的服务了~",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 1275,
-                                    "endIndex": 1310
-                                }
-                            }
-                        }
-                    ],
-                    "style": {},
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 1274,
-                        "endIndex": 1310
-                    },
-                    "lineId": "ARygLU"
-                }
-            },
-            {
-                "type": "gallery",
-                "gallery": {
-                    "imageList": [
-                        {
-                            "fileToken": "boxcndIwiSDncuMeTm48xJdWAwc",
-                            "width": 1000,
-                            "height": 750
-                        }
-                    ],
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 1311,
-                        "endIndex": 1312
-                    }
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [
-                        {
-                            "type": "textRun",
-                            "textRun": {
-                                "text": "（欢迎点赞投币一键三连~）",
-                                "style": {},
-                                "location": {
-                                    "zoneId": "0",
-                                    "startIndex": 1314,
-                                    "endIndex": 1327
-                                }
-                            }
-                        }
-                    ],
-                    "style": {
-                        "align": "center"
-                    },
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 1313,
-                        "endIndex": 1327
-                    },
-                    "lineId": "oui2pz"
-                }
-            },
-            {
-                "type": "paragraph",
-                "paragraph": {
-                    "elements": [],
-                    "location": {
-                        "zoneId": "0",
-                        "startIndex": 1328,
-                        "endIndex": 1328
-                    },
-                    "lineId": "YN8E9J"
+                    }]
                 }
             }
-        ]
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "问题伊始",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 41,
+                            "endIndex": 45
+                        }
+                    }
+                }],
+                "style": {
+                    "headingLevel": 1
+                },
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 40,
+                    "endIndex": 45
+                },
+                "lineId": "SZbKoY"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "这个问题其实已经影响我非常长的时间了。我最常用的网站 ",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 47,
+                            "endIndex": 74
+                        }
+                    }
+                }, {
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "飞书文档",
+                        "style": {
+                            "backColor": {
+                                "red": 255,
+                                "green": 246,
+                                "blue": 122,
+                                "alpha": 0.8
+                            }
+                        },
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 74,
+                            "endIndex": 78
+                        }
+                    }
+                }, {
+                    "type": "textRun",
+                    "textRun": {
+                        "text": " 从我第一次使用开始就会时不时出现一些小 bug。例如某个文档页面前端会出现一些莫名奇妙的滚动条，但是过几秒钟就会消失，页面就会变得正常，所以也不算很影响体验。",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 78,
+                            "endIndex": 158
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 46,
+                    "endIndex": 158
+                },
+                "lineId": "eQaaPA"
+            }
+        }, {
+            "type": "gallery",
+            "gallery": {
+                "galleryStyle": {},
+                "imageList": [{
+                    "fileToken": "boxcnosU1A2yyZyz6Oqul2VRtad",
+                    "width": 1808,
+                    "height": 952
+                }],
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 159,
+                    "endIndex": 161
+                }
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "但不知道飞书文档哪次更新后，我的飞书文档连整个文档界面都开始不断抖动，不过还算能用，我想着可能是飞书文档的前端 RD 某次上线上了一堆 feature（bug）上去吧，过两天可能就 bugfix 了。但是飞书文档界面用它一次次不停地抖动，倔强的告诉我，“我就是有 bug，你来打我呀😒”。好吧，我忍了。",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 163,
+                            "endIndex": 315
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 162,
+                    "endIndex": 315
+                },
+                "lineId": "muhAcz"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "直到今天，文档基本上彻底不可用了，抖动地幅度越来越来，看的我简直眼花。并且鼠标光标碰到评论按钮，界面就会直接崩溃。",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 317,
+                            "endIndex": 374
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 316,
+                    "endIndex": 374
+                },
+                "lineId": "FsigYb"
+            }
+        }, {
+            "type": "file",
+            "file": {
+                "fileToken": "boxcnp6WKYfB6QkUr4js5xZd9qh",
+                "viewType": "preview",
+                "fileName": "2021-11-17_19-41-31.mp4",
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 375,
+                    "endIndex": 376
+                }
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "（复现视频）",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 378,
+                            "endIndex": 384
+                        }
+                    }
+                }],
+                "style": {
+                    "align": "center"
+                },
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 377,
+                    "endIndex": 384
+                },
+                "lineId": "PIpuEE"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "飞书文档崩了，我也蚌埠住了。在询问女朋友打开这个文档是否正常而得到肯定回复地时候。我开始排查起了这个诡异的 bug。",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 386,
+                            "endIndex": 444
+                        }
+                    }
+                }],
+                "style": {
+                    "align": "left"
+                },
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 385,
+                    "endIndex": 444
+                },
+                "lineId": "riIpuI"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [],
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 445,
+                    "endIndex": 445
+                },
+                "lineId": "n787p6"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "过程",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 447,
+                            "endIndex": 449
+                        }
+                    }
+                }],
+                "style": {
+                    "headingLevel": 1
+                },
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 446,
+                    "endIndex": 449
+                },
+                "lineId": "PyvQrD"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "作为一名工程师，找 bug 之前首先肯定需要先枚举一些犯罪嫌疑人。",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 451,
+                            "endIndex": 484
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 450,
+                    "endIndex": 484
+                },
+                "lineId": "5ZTVnO"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "飞书文档的前端报错。",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 486,
+                            "endIndex": 496
+                        }
+                    }
+                }],
+                "style": {
+                    "list": {
+                        "type": "number",
+                        "indentLevel": 1,
+                        "number": 1
+                    }
+                },
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 485,
+                    "endIndex": 496
+                },
+                "lineId": "D3PH83"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "我的浏览器问题",
+                        "style": {
+                            "backColor": {
+                                "red": 251,
+                                "green": 191,
+                                "blue": 188,
+                                "alpha": 1
+                            }
+                        },
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 498,
+                            "endIndex": 505
+                        }
+                    }
+                }],
+                "style": {
+                    "list": {
+                        "type": "number",
+                        "indentLevel": 1,
+                        "number": 2
+                    }
+                },
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 497,
+                    "endIndex": 505
+                },
+                "lineId": "S8XblF"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "浏览器版本",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 507,
+                            "endIndex": 512
+                        }
+                    }
+                }],
+                "style": {
+                    "list": {
+                        "type": "bullet",
+                        "indentLevel": 2
+                    }
+                },
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 506,
+                    "endIndex": 512
+                },
+                "lineId": "7tgp5t"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "浏览器缓存",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 514,
+                            "endIndex": 519
+                        }
+                    }
+                }],
+                "style": {
+                    "list": {
+                        "type": "bullet",
+                        "indentLevel": 2
+                    }
+                },
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 513,
+                    "endIndex": 519
+                },
+                "lineId": "V514rE"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "我的显示器和我的笔记本分辨率配合得不是很好",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 521,
+                            "endIndex": 542
+                        }
+                    }
+                }],
+                "style": {
+                    "list": {
+                        "type": "number",
+                        "indentLevel": 1,
+                        "number": 3
+                    }
+                },
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 520,
+                    "endIndex": 542
+                },
+                "lineId": "A35Fhd"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "玄学",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 544,
+                            "endIndex": 546
+                        }
+                    }
+                }],
+                "style": {
+                    "list": {
+                        "type": "number",
+                        "indentLevel": 1,
+                        "number": 4
+                    }
+                },
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 543,
+                    "endIndex": 546
+                },
+                "lineId": "TSNjDC"
+            }
+        }, {
+            "type": "code",
+            "code": {
+                "language": "Python",
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 547,
+                    "endIndex": 548
+                },
+                "zoneId": "u4gkco3bsq",
+                "body": {
+                    "blocks": [{
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "if __name__ == '__main__':",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "u4gkco3bsq",
+                                        "startIndex": 0,
+                                        "endIndex": 26
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "u4gkco3bsq",
+                                "startIndex": 0,
+                                "endIndex": 26
+                            },
+                            "lineId": "CjLTrN"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    print(\"hello world\")",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "u4gkco3bsq",
+                                        "startIndex": 28,
+                                        "endIndex": 52
+                                    }
+                                }
+                            }],
+                            "style": {},
+                            "location": {
+                                "zoneId": "u4gkco3bsq",
+                                "startIndex": 27,
+                                "endIndex": 52
+                            }
+                        }
+                    }]
+                }
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "出于对老东家产品的信任，首先看第一点，飞书文档前端抛出来的错",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 550,
+                            "endIndex": 580
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 549,
+                    "endIndex": 580
+                },
+                "lineId": "HUOcrL"
+            }
+        }, {
+            "type": "gallery",
+            "gallery": {
+                "galleryStyle": {},
+                "imageList": [{
+                    "fileToken": "boxcnct96P1cbuXCbOOoaEPITTU",
+                    "width": 1808,
+                    "height": 952
+                }],
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 581,
+                    "endIndex": 583
+                }
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "Error: Minified React error #185; 咱也看不懂这种前端报错，贴到 Google 看 issue。",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 584,
+                            "endIndex": 648
+                        }
+                    }
+                }],
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 584,
+                    "endIndex": 648
+                },
+                "lineId": "QwzwbR"
+            }
+        }, {
+            "type": "undefinedBlock",
+            "undefinedBlock": {
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 649,
+                    "endIndex": 651
+                }
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "看到一条貌似有点像原因的 reply",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 652,
+                            "endIndex": 670
+                        }
+                    }
+                }],
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 652,
+                    "endIndex": 670
+                },
+                "lineId": "zIqCGs"
+            }
+        }, {
+            "type": "gallery",
+            "gallery": {
+                "galleryStyle": {},
+                "imageList": [{
+                    "fileToken": "boxcn3KUwOkpSnq4QoueGgLqQ2f",
+                    "width": 1189,
+                    "height": 342
+                }],
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 671,
+                    "endIndex": 673
+                }
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "意思是 setState 这个函数被放到 React 生命周期hook 中的 componentDidUpdate 函数里面了。而 componentDidUpdate 又会在每个 setState 调用时触发，这样无穷递归循环下去，导致调用栈深度超出浏览器限制。 好有道理啊！",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 674,
+                            "endIndex": 813
+                        }
+                    }
+                }],
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 674,
+                    "endIndex": 813
+                },
+                "lineId": "pUkWDr"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "应该是问题导致的原因了，然而并没有啥用呀，没法定位到具体地方，也没法帮我解决问题。我放弃了第一个嫌疑人。",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 815,
+                            "endIndex": 867
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 814,
+                    "endIndex": 867
+                },
+                "lineId": "X8sNZz"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "第二个第三个嫌疑人也很好验证。清浏览器缓存，换一个浏览器，拔掉显示器.... 这些操作我都尝试一下，问题依然没有得到解决。总不能是玄学吧🤐？",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 869,
+                            "endIndex": 940
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 868,
+                    "endIndex": 940
+                },
+                "lineId": "JdFC3S"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 941,
+                    "endIndex": 942
+                },
+                "lineId": "ulrqwY"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "排查问题是需要方法的，别人用我的账号登录飞书文档没有这个问题，但我的所有电脑的浏览器都有这个问题。其实到这了就是一个在我的几台电脑中找相同，在我的电脑和别人的电脑之间找相同的游戏了。",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 944,
+                            "endIndex": 1035
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 943,
+                    "endIndex": 1035
+                },
+                "lineId": "5Ocnag"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "我的几台电脑的浏览器的共同之处？我的 chrome 会同步我的所有的 chrome extension 呀！想到这了，其实我心里基本上已经有了答案了。我之前其实就写过一个 chrome extension",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 1037,
+                            "endIndex": 1139
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 1036,
+                    "endIndex": 1139
+                },
+                "lineId": "CwmLvi"
+            }
+        }, {
+            "type": "undefinedBlock",
+            "undefinedBlock": {
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 1140,
+                    "endIndex": 1142
+                }
+            }
+        }, {
+            "type": "gallery",
+            "gallery": {
+                "galleryStyle": {},
+                "imageList": [{
+                    "fileToken": "boxcnZEHVyiq6zzuewU0aciRqth",
+                    "width": 1807,
+                    "height": 1080
+                }],
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 1143,
+                    "endIndex": 1145
+                }
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "其中有个 bug 就是",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 1147,
+                            "endIndex": 1158
+                        }
+                    }
+                }, {
+                    "type": "textRun",
+                    "textRun": {
+                        "text": " extension 的全局 css 导致网页显示出错",
+                        "style": {
+                            "backColor": {
+                                "red": 255,
+                                "green": 246,
+                                "blue": 122,
+                                "alpha": 0.8
+                            }
+                        },
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 1158,
+                            "endIndex": 1185
+                        }
+                    }
+                }, {
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "。在经过对我的所有 chrome extension 进行二分搜索排查后，定位到是",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 1185,
+                            "endIndex": 1226
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 1146,
+                    "endIndex": 1226
+                },
+                "lineId": "odCpsM"
+            }
+        }, {
+            "type": "gallery",
+            "gallery": {
+                "galleryStyle": {},
+                "imageList": [{
+                    "fileToken": "boxcn1LD3LkbmULWRvoR8Zp0WWf",
+                    "width": 1808,
+                    "height": 952
+                }],
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 1227,
+                    "endIndex": 1229
+                }
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "这个 百度划词翻译 插件的问题。（想不到你这个白白胖胖的百度翻译插件还会做这种事情😵",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 1230,
+                            "endIndex": 1273
+                        }
+                    }
+                }],
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 1230,
+                    "endIndex": 1273
+                },
+                "lineId": "82nHyy"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "解法很简单，直接禁用这个插件即可。我终于又能享受飞书文档丝滑的服务了~",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 1275,
+                            "endIndex": 1310
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 1274,
+                    "endIndex": 1310
+                },
+                "lineId": "ARygLU"
+            }
+        }, {
+            "type": "gallery",
+            "gallery": {
+                "imageList": [{
+                    "fileToken": "boxcndIwiSDncuMeTm48xJdWAwc",
+                    "width": 1000,
+                    "height": 750
+                }],
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 1311,
+                    "endIndex": 1312
+                }
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "（欢迎点赞投币一键三连~）",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 1314,
+                            "endIndex": 1327
+                        }
+                    }
+                }],
+                "style": {
+                    "align": "center"
+                },
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 1313,
+                    "endIndex": 1327
+                },
+                "lineId": "tSrpgI"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [],
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 1328,
+                    "endIndex": 1328
+                },
+                "lineId": "B3qLBO"
+            }
+        }]
     }
 }
