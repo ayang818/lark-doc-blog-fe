@@ -31,8 +31,9 @@ export default class LarkDocBlogApp extends Component {
                         <BlogNav changeShowMode={this.changeShowMode} isLight={this.state.isLight}></BlogNav>
                     </Header>
                     <Routes>
-                        <Route path='' element={<Article id="-1" title='about'></Article>}></Route>
+                        <Route path='' element={<Article article={{id: 'wikcnojbE0C0j2C8tNgKdjOBqRh'}}></Article>}></Route>
                         <Route path='blog' element={<BlogIndex></BlogIndex>}></Route>
+                        <Route path='article/:wikiToken' element={<Article></Article>}></Route>
                     </Routes>
                 </Layout>
             </div>

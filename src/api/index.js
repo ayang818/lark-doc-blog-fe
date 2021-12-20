@@ -7,7 +7,12 @@ export const  getChildrenNodes = async (parentToken='default') => {
 }
 
 
-export const getNodeContent = async (docToken) => {
-    let resp = await axios.get(`/doc/${docToken}`)
+export const getNodeContent = async (wikiToken) => {
+    let resp = await axios.get(`/doc/${wikiToken}`)
+    return resp
+}
+
+export const getDocsMetaData = async (tokenList) => {
+    let resp = await axios.post(`/doc/metadata`, {req: tokenList})
     return resp
 }

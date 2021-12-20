@@ -15,16 +15,25 @@ export default class ImageShow extends Component {
         height: 952
     }
 
+    retryTime = 0
+    maxRetryTime = 3
+
     openBigImage = (e) => {
         const {width, height, fileToken} = this.props
         window.open(`http://localhost:5000/download/${fileToken}`)
     }
 
     onErrorReload = (e) => {
+        // 超时重试次数限制
+        if (this.retryTime > this.maxRetryTime) {
+            // TODO 换成加载失败的图片
+            return
+        }
         let {target} = e
         console.error(`reload token: ${this.props.fileToken}`)
         let src = target.src
         target.src = src + '?t=' + new Date().getTime()
+        this.retryTime += 1
     }
 
     render() {
