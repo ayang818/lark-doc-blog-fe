@@ -14,11 +14,28 @@ class Article extends Component {
         wikiToken: ''
     }
 
+    static propsTypes = {
+        wikiToken: PropTypes.string,
+        direct: PropTypes.bool
+    }
+
+    static defaultProps = {
+        // 是否直接使用 props 传入的 wikiToken
+        direct: false
+    }
+
     componentDidMount = () => {
-        let urlParams = window.location.href.split('/')
-        let len = urlParams.length
-        let wikiToken = urlParams[len - 1]
+        let {wikiToken, direct} = this.props
+        // 如果不是直接传入 wikiToken，那就尝试去 url 去拿
+        if (!direct) {
+            let urlParams = window.location.href.split('/')
+            let len = urlParams.length
+            wikiToken = urlParams[len - 1]
+            // 不要 ? 后面的param
+            wikiToken = wikiToken.split('?')[0]
+        }
         this.setState({wikiToken})
+        // 拿到文章的 json 内容解析并放到 state
         getNodeContent(wikiToken).then(
             resp => {
                 let article = resp.data
@@ -37,10 +54,10 @@ class Article extends Component {
     render() {
         const {titleVdom, bodyVdom, wikiToken} = this.state
         return (
-            <div className='article-border'>
-                <Row >
+            <div >
+                <Row>
                     <Col span={7}></Col>
-                    <Col span={10}>
+                    <Col span={10} className='article-border'>
                         <div className='prev-title'>
                             {
                                 titleVdom

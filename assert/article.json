@@ -3,24 +3,21 @@
         "elements": [{
             "type": "textRun",
             "textRun": {
-                "text": "困扰一年的前端问题排查经历",
+                "text": "React 组件传参",
                 "style": {},
                 "location": {
                     "zoneId": "0",
-                    "startIndex": 1,
-                    "endIndex": 14
+                    "startIndex": 0,
+                    "endIndex": 10
                 }
             }
         }],
-        "style": {
-            "align": "center"
-        },
         "location": {
             "zoneId": "0",
             "startIndex": 0,
-            "endIndex": 14
+            "endIndex": 10
         },
-        "lineId": "U8VNtG"
+        "lineId": "r8XTRW"
     },
     "body": {
         "blocks": [{
@@ -29,47 +26,58 @@
                 "elements": [{
                     "type": "textRun",
                     "textRun": {
-                        "text": "post=0\u0026tag=[\"tingle\"]",
+                        "text": "父组件 -\u003e 子组件",
                         "style": {},
                         "location": {
                             "zoneId": "0",
-                            "startIndex": 16,
-                            "endIndex": 37
+                            "startIndex": 12,
+                            "endIndex": 22
                         }
                     }
                 }],
                 "style": {
-                    "quote": true
+                    "headingLevel": 2
                 },
                 "location": {
                     "zoneId": "0",
-                    "startIndex": 15,
-                    "endIndex": 37
+                    "startIndex": 11,
+                    "endIndex": 22
                 },
-                "lineId": "JXrMS5"
+                "lineId": "RFUufQ"
             }
         }, {
-            "type": "callout",
-            "callout": {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "使用 props 进行传参",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 24,
+                            "endIndex": 37
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 23,
+                    "endIndex": 37
+                },
+                "lineId": "PY2iwN"
+            }
+        }, {
+            "type": "code",
+            "code": {
+                "language": "JavaScript",
                 "location": {
                     "zoneId": "0",
                     "startIndex": 38,
                     "endIndex": 39
                 },
-                "calloutEmojiId": "wink",
-                "calloutBackgroundColor": {
-                    "red": 254,
-                    "green": 241,
-                    "blue": 241,
-                    "alpha": 1
-                },
-                "calloutBorderColor": {
-                    "red": 251,
-                    "green": 191,
-                    "blue": 188,
-                    "alpha": 1
-                },
-                "zoneId": "056weuwrpj",
+                "zoneId": "m64fknxicf",
                 "body": {
                     "blocks": [{
                         "type": "paragraph",
@@ -77,496 +85,33 @@
                             "elements": [{
                                 "type": "textRun",
                                 "textRun": {
-                                    "text": "bug不复杂，解决了就很开心~",
+                                    "text": "import PropTypes from 'prop-types'",
                                     "style": {},
                                     "location": {
-                                        "zoneId": "056weuwrpj",
-                                        "startIndex": 1,
-                                        "endIndex": 16
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 0,
+                                        "endIndex": 34
                                     }
                                 }
                             }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 0,
+                                "endIndex": 34
+                            },
+                            "lineId": "W6dsxc"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [],
                             "style": {},
                             "location": {
-                                "zoneId": "056weuwrpj",
-                                "startIndex": 0,
-                                "endIndex": 16
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 35,
+                                "endIndex": 36
                             },
-                            "lineId": "h3o4tT"
-                        }
-                    }]
-                }
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "问题伊始",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 41,
-                            "endIndex": 45
-                        }
-                    }
-                }],
-                "style": {
-                    "headingLevel": 1
-                },
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 40,
-                    "endIndex": 45
-                },
-                "lineId": "SZbKoY"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "这个问题其实已经影响我非常长的时间了。我最常用的网站 ",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 47,
-                            "endIndex": 74
-                        }
-                    }
-                }, {
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "飞书文档",
-                        "style": {
-                            "backColor": {
-                                "red": 255,
-                                "green": 246,
-                                "blue": 122,
-                                "alpha": 0.8
-                            }
-                        },
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 74,
-                            "endIndex": 78
-                        }
-                    }
-                }, {
-                    "type": "textRun",
-                    "textRun": {
-                        "text": " 从我第一次使用开始就会时不时出现一些小 bug。例如某个文档页面前端会出现一些莫名奇妙的滚动条，但是过几秒钟就会消失，页面就会变得正常，所以也不算很影响体验。",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 78,
-                            "endIndex": 158
-                        }
-                    }
-                }],
-                "style": {},
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 46,
-                    "endIndex": 158
-                },
-                "lineId": "eQaaPA"
-            }
-        }, {
-            "type": "gallery",
-            "gallery": {
-                "galleryStyle": {},
-                "imageList": [{
-                    "fileToken": "boxcnosU1A2yyZyz6Oqul2VRtad",
-                    "width": 1808,
-                    "height": 952
-                }],
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 159,
-                    "endIndex": 161
-                }
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "但不知道飞书文档哪次更新后，我的飞书文档连整个文档界面都开始不断抖动，不过还算能用，我想着可能是飞书文档的前端 RD 某次上线上了一堆 feature（bug）上去吧，过两天可能就 bugfix 了。但是飞书文档界面用它一次次不停地抖动，倔强的告诉我，“我就是有 bug，你来打我呀😒”。好吧，我忍了。",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 163,
-                            "endIndex": 315
-                        }
-                    }
-                }],
-                "style": {},
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 162,
-                    "endIndex": 315
-                },
-                "lineId": "muhAcz"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "直到今天，文档基本上彻底不可用了，抖动地幅度越来越来，看的我简直眼花。并且鼠标光标碰到评论按钮，界面就会直接崩溃。",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 317,
-                            "endIndex": 374
-                        }
-                    }
-                }],
-                "style": {},
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 316,
-                    "endIndex": 374
-                },
-                "lineId": "FsigYb"
-            }
-        }, {
-            "type": "file",
-            "file": {
-                "fileToken": "boxcnp6WKYfB6QkUr4js5xZd9qh",
-                "viewType": "preview",
-                "fileName": "2021-11-17_19-41-31.mp4",
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 375,
-                    "endIndex": 376
-                }
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "（复现视频）",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 378,
-                            "endIndex": 384
-                        }
-                    }
-                }],
-                "style": {
-                    "align": "center"
-                },
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 377,
-                    "endIndex": 384
-                },
-                "lineId": "PIpuEE"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "飞书文档崩了，我也蚌埠住了。在询问女朋友打开这个文档是否正常而得到肯定回复地时候。我开始排查起了这个诡异的 bug。",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 386,
-                            "endIndex": 444
-                        }
-                    }
-                }],
-                "style": {
-                    "align": "left"
-                },
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 385,
-                    "endIndex": 444
-                },
-                "lineId": "riIpuI"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [],
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 445,
-                    "endIndex": 445
-                },
-                "lineId": "n787p6"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "过程",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 447,
-                            "endIndex": 449
-                        }
-                    }
-                }],
-                "style": {
-                    "headingLevel": 1
-                },
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 446,
-                    "endIndex": 449
-                },
-                "lineId": "PyvQrD"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "作为一名工程师，找 bug 之前首先肯定需要先枚举一些犯罪嫌疑人。",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 451,
-                            "endIndex": 484
-                        }
-                    }
-                }],
-                "style": {},
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 450,
-                    "endIndex": 484
-                },
-                "lineId": "5ZTVnO"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "飞书文档的前端报错。",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 486,
-                            "endIndex": 496
-                        }
-                    }
-                }],
-                "style": {
-                    "list": {
-                        "type": "number",
-                        "indentLevel": 1,
-                        "number": 1
-                    }
-                },
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 485,
-                    "endIndex": 496
-                },
-                "lineId": "D3PH83"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "我的浏览器问题",
-                        "style": {
-                            "backColor": {
-                                "red": 251,
-                                "green": 191,
-                                "blue": 188,
-                                "alpha": 1
-                            }
-                        },
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 498,
-                            "endIndex": 505
-                        }
-                    }
-                }],
-                "style": {
-                    "list": {
-                        "type": "number",
-                        "indentLevel": 1,
-                        "number": 2
-                    }
-                },
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 497,
-                    "endIndex": 505
-                },
-                "lineId": "S8XblF"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "浏览器版本",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 507,
-                            "endIndex": 512
-                        }
-                    }
-                }],
-                "style": {
-                    "list": {
-                        "type": "bullet",
-                        "indentLevel": 2
-                    }
-                },
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 506,
-                    "endIndex": 512
-                },
-                "lineId": "7tgp5t"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "浏览器缓存",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 514,
-                            "endIndex": 519
-                        }
-                    }
-                }],
-                "style": {
-                    "list": {
-                        "type": "bullet",
-                        "indentLevel": 2
-                    }
-                },
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 513,
-                    "endIndex": 519
-                },
-                "lineId": "V514rE"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "我的显示器和我的笔记本分辨率配合得不是很好",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 521,
-                            "endIndex": 542
-                        }
-                    }
-                }],
-                "style": {
-                    "list": {
-                        "type": "number",
-                        "indentLevel": 1,
-                        "number": 3
-                    }
-                },
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 520,
-                    "endIndex": 542
-                },
-                "lineId": "A35Fhd"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "玄学",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 544,
-                            "endIndex": 546
-                        }
-                    }
-                }],
-                "style": {
-                    "list": {
-                        "type": "number",
-                        "indentLevel": 1,
-                        "number": 4
-                    }
-                },
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 543,
-                    "endIndex": 546
-                },
-                "lineId": "TSNjDC"
-            }
-        }, {
-            "type": "code",
-            "code": {
-                "language": "Python",
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 547,
-                    "endIndex": 548
-                },
-                "zoneId": "u4gkco3bsq",
-                "body": {
-                    "blocks": [{
-                        "type": "paragraph",
-                        "paragraph": {
-                            "elements": [{
-                                "type": "textRun",
-                                "textRun": {
-                                    "text": "if __name__ == '__main__':",
-                                    "style": {},
-                                    "location": {
-                                        "zoneId": "u4gkco3bsq",
-                                        "startIndex": 0,
-                                        "endIndex": 26
-                                    }
-                                }
-                            }],
-                            "location": {
-                                "zoneId": "u4gkco3bsq",
-                                "startIndex": 0,
-                                "endIndex": 26
-                            },
-                            "lineId": "CjLTrN"
+                            "lineId": "1UOpWX"
                         }
                     }, {
                         "type": "paragraph",
@@ -574,20 +119,3121 @@
                             "elements": [{
                                 "type": "textRun",
                                 "textRun": {
-                                    "text": "    print(\"hello world\")",
+                                    "text": "class Son ",
                                     "style": {},
                                     "location": {
-                                        "zoneId": "u4gkco3bsq",
-                                        "startIndex": 28,
-                                        "endIndex": 52
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 38,
+                                        "endIndex": 48
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "extends",
+                                    "style": {
+                                        "italic": true
+                                    },
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 48,
+                                        "endIndex": 55
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 55,
+                                        "endIndex": 56
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "Component",
+                                    "style": {
+                                        "underLine": true
+                                    },
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 56,
+                                        "endIndex": 65
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 65,
+                                        "endIndex": 67
                                     }
                                 }
                             }],
                             "style": {},
                             "location": {
-                                "zoneId": "u4gkco3bsq",
-                                "startIndex": 27,
-                                "endIndex": 52
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 37,
+                                "endIndex": 67
+                            },
+                            "lineId": "G6RN2k"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    // 限定参数类型",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 69,
+                                        "endIndex": 82
+                                    }
+                                }
+                            }],
+                            "style": {},
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 68,
+                                "endIndex": 82
+                            },
+                            "lineId": "Mk2MU2"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    static propTypes = {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 84,
+                                        "endIndex": 108
+                                    }
+                                }
+                            }],
+                            "style": {},
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 83,
+                                "endIndex": 108
+                            },
+                            "lineId": "Rbpi3r"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        name: PropTypes.string.required",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 109,
+                                        "endIndex": 148
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 109,
+                                "endIndex": 148
+                            },
+                            "lineId": "ayNPmj"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    }",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 149,
+                                        "endIndex": 154
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 149,
+                                "endIndex": 154
+                            },
+                            "lineId": "lclTf1"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 155,
+                                        "endIndex": 159
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 155,
+                                "endIndex": 159
+                            },
+                            "lineId": "ny2IOH"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    defaultProps = {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 160,
+                                        "endIndex": 180
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 160,
+                                "endIndex": 180
+                            },
+                            "lineId": "upKBlQ"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        name: \"default name\"",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 181,
+                                        "endIndex": 209
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 181,
+                                "endIndex": 209
+                            },
+                            "lineId": "chyhYK"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    }",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 210,
+                                        "endIndex": 215
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 210,
+                                "endIndex": 215
+                            },
+                            "lineId": "CWf65q"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 217,
+                                        "endIndex": 221
+                                    }
+                                }
+                            }],
+                            "style": {},
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 216,
+                                "endIndex": 221
+                            },
+                            "lineId": "Bs2XgN"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    render() {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 222,
+                                        "endIndex": 236
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 222,
+                                "endIndex": 236
+                            },
+                            "lineId": "wDOWQM"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        return (",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 237,
+                                        "endIndex": 253
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 237,
+                                "endIndex": 253
+                            },
+                            "lineId": "isRGYv"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "            \u003cdiv\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 254,
+                                        "endIndex": 271
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 254,
+                                "endIndex": 271
+                            },
+                            "lineId": "VGbe4U"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "                {this.props.name}",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 272,
+                                        "endIndex": 305
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 272,
+                                "endIndex": 305
+                            },
+                            "lineId": "xS2f52"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "            \u003c/div\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 306,
+                                        "endIndex": 324
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 306,
+                                "endIndex": 324
+                            },
+                            "lineId": "WtfL0j"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        )",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 325,
+                                        "endIndex": 334
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 325,
+                                "endIndex": 334
+                            },
+                            "lineId": "P7U75d"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    }",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 335,
+                                        "endIndex": 340
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 335,
+                                "endIndex": 340
+                            },
+                            "lineId": "OsXHcS"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "}",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 341,
+                                        "endIndex": 342
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 341,
+                                "endIndex": 342
+                            },
+                            "lineId": "6lYgwt"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 343,
+                                        "endIndex": 344
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 343,
+                                "endIndex": 344
+                            },
+                            "lineId": "r3D8dX"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "class",
+                                    "style": {
+                                        "italic": true
+                                    },
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 345,
+                                        "endIndex": 350
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " Father ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 350,
+                                        "endIndex": 358
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "extends",
+                                    "style": {
+                                        "italic": true
+                                    },
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 358,
+                                        "endIndex": 365
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 365,
+                                        "endIndex": 366
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "Component",
+                                    "style": {
+                                        "underLine": true
+                                    },
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 366,
+                                        "endIndex": 375
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 375,
+                                        "endIndex": 377
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 345,
+                                "endIndex": 377
+                            },
+                            "lineId": "KVmD6O"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    render() {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 378,
+                                        "endIndex": 392
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 378,
+                                "endIndex": 392
+                            },
+                            "lineId": "DJxyvU"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        return (",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 393,
+                                        "endIndex": 409
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 393,
+                                "endIndex": 409
+                            },
+                            "lineId": "D4EVK6"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "            \u003cdiv\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 410,
+                                        "endIndex": 427
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 410,
+                                "endIndex": 427
+                            },
+                            "lineId": "HQu8rE"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "                {/* 传递名字给子组件 */}",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 428,
+                                        "endIndex": 460
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 428,
+                                "endIndex": 460
+                            },
+                            "lineId": "28TinK"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "                 \u003cSon ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 461,
+                                        "endIndex": 483
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "name=\"wuhuqifei\"",
+                                    "style": {
+                                        "backColor": {
+                                            "red": 251,
+                                            "green": 191,
+                                            "blue": 188,
+                                            "alpha": 1
+                                        }
+                                    },
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 483,
+                                        "endIndex": 499
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "\u003e\u003c/Son\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 499,
+                                        "endIndex": 506
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 461,
+                                "endIndex": 506
+                            },
+                            "lineId": "2CTqOd"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "            \u003c/div\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 507,
+                                        "endIndex": 525
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 507,
+                                "endIndex": 525
+                            },
+                            "lineId": "viCB6r"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        )",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 526,
+                                        "endIndex": 535
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 526,
+                                "endIndex": 535
+                            },
+                            "lineId": "t6ffvj"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    }",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 536,
+                                        "endIndex": 541
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 536,
+                                "endIndex": 541
+                            },
+                            "lineId": "41lte3"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "}",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "m64fknxicf",
+                                        "startIndex": 542,
+                                        "endIndex": 543
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "m64fknxicf",
+                                "startIndex": 542,
+                                "endIndex": 543
+                            },
+                            "lineId": "1KZB10"
+                        }
+                    }]
+                }
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 40,
+                    "endIndex": 41
+                },
+                "lineId": "KdSjFQ"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "子组件 -\u003e 父组件",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 43,
+                            "endIndex": 53
+                        }
+                    }
+                }],
+                "style": {
+                    "headingLevel": 2
+                },
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 42,
+                    "endIndex": 53
+                },
+                "lineId": "c4OBX7"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "通过父组件传一个 函数 参数到子组件中，子组件在合适的时机调用这个 函数，把参数传递给这个 函数，从而达成子 -\u003e 父的数据流动",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 55,
+                            "endIndex": 119
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 54,
+                    "endIndex": 119
+                },
+                "lineId": "o3lW6r"
+            }
+        }, {
+            "type": "code",
+            "code": {
+                "language": "Scala",
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 120,
+                    "endIndex": 121
+                },
+                "zoneId": "tkvrwy0oiu",
+                "body": {
+                    "blocks": [{
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "import PropTypes from 'prop-types'",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 0,
+                                        "endIndex": 34
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 0,
+                                "endIndex": 34
+                            },
+                            "lineId": "Mj4uQh"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [],
+                            "style": {},
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 35,
+                                "endIndex": 36
+                            },
+                            "lineId": "nsnlUJ"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "class Son ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 38,
+                                        "endIndex": 48
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "extends",
+                                    "style": {
+                                        "italic": true
+                                    },
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 48,
+                                        "endIndex": 55
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 55,
+                                        "endIndex": 56
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "Component",
+                                    "style": {
+                                        "underLine": true
+                                    },
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 56,
+                                        "endIndex": 65
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 65,
+                                        "endIndex": 67
+                                    }
+                                }
+                            }],
+                            "style": {},
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 37,
+                                "endIndex": 67
+                            },
+                            "lineId": "oPs6Ax"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    // 限定参数类型",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 69,
+                                        "endIndex": 82
+                                    }
+                                }
+                            }],
+                            "style": {},
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 68,
+                                "endIndex": 82
+                            },
+                            "lineId": "vuHxeO"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    static propTypes = {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 84,
+                                        "endIndex": 108
+                                    }
+                                }
+                            }],
+                            "style": {},
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 83,
+                                "endIndex": 108
+                            },
+                            "lineId": "2p1vtv"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        tell: PropTypes.func.required",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 109,
+                                        "endIndex": 146
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 109,
+                                "endIndex": 146
+                            },
+                            "lineId": "FYJM3o"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    }",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 147,
+                                        "endIndex": 152
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 147,
+                                "endIndex": 152
+                            },
+                            "lineId": "ma4Lkd"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 154,
+                                        "endIndex": 158
+                                    }
+                                }
+                            }],
+                            "style": {},
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 153,
+                                "endIndex": 158
+                            },
+                            "lineId": "RsOqPT"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    click = () =\u003e {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 159,
+                                        "endIndex": 178
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 159,
+                                "endIndex": 178
+                            },
+                            "lineId": "aNAIuL"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        let score = this.score.value",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 179,
+                                        "endIndex": 215
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 179,
+                                "endIndex": 215
+                            },
+                            "lineId": "V7gVCz"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        // 传递分数给父组件",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 216,
+                                        "endIndex": 235
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 216,
+                                "endIndex": 235
+                            },
+                            "lineId": "lBUst0"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 236,
+                                        "endIndex": 244
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "this.props.tell(score)",
+                                    "style": {
+                                        "backColor": {
+                                            "red": 251,
+                                            "green": 191,
+                                            "blue": 188,
+                                            "alpha": 1
+                                        }
+                                    },
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 244,
+                                        "endIndex": 266
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 236,
+                                "endIndex": 266
+                            },
+                            "lineId": "iYKQK3"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    }",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 267,
+                                        "endIndex": 272
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 267,
+                                "endIndex": 272
+                            },
+                            "lineId": "nrEau9"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 273,
+                                        "endIndex": 277
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 273,
+                                "endIndex": 277
+                            },
+                            "lineId": "nlt2o8"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    render() {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 278,
+                                        "endIndex": 292
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 278,
+                                "endIndex": 292
+                            },
+                            "lineId": "kwCiuJ"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        return (",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 293,
+                                        "endIndex": 309
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 293,
+                                "endIndex": 309
+                            },
+                            "lineId": "ULgnGo"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "            \u003cdiv\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 310,
+                                        "endIndex": 327
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 310,
+                                "endIndex": 327
+                            },
+                            "lineId": "N51GeI"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "                \u003cinput ref={c =\u003e this.score = c}/\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 328,
+                                        "endIndex": 378
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 328,
+                                "endIndex": 378
+                            },
+                            "lineId": "eCXhyU"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "                \u003cbutton onClick={this.click}\u003etell score\u003cbutton\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 379,
+                                        "endIndex": 442
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 379,
+                                "endIndex": 442
+                            },
+                            "lineId": "pyWK8A"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "            \u003c/div\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 443,
+                                        "endIndex": 461
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 443,
+                                "endIndex": 461
+                            },
+                            "lineId": "I23Lca"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        )",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 462,
+                                        "endIndex": 471
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 462,
+                                "endIndex": 471
+                            },
+                            "lineId": "5ZCzVQ"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    }",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 472,
+                                        "endIndex": 477
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 472,
+                                "endIndex": 477
+                            },
+                            "lineId": "y28eCC"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "}",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 478,
+                                        "endIndex": 479
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 478,
+                                "endIndex": 479
+                            },
+                            "lineId": "f18Cib"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 480,
+                                        "endIndex": 481
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 480,
+                                "endIndex": 481
+                            },
+                            "lineId": "lyyvZ2"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "class",
+                                    "style": {
+                                        "italic": true
+                                    },
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 482,
+                                        "endIndex": 487
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " Father ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 487,
+                                        "endIndex": 495
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "extends",
+                                    "style": {
+                                        "italic": true
+                                    },
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 495,
+                                        "endIndex": 502
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 502,
+                                        "endIndex": 503
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "Component",
+                                    "style": {
+                                        "underLine": true
+                                    },
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 503,
+                                        "endIndex": 512
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 512,
+                                        "endIndex": 514
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 482,
+                                "endIndex": 514
+                            },
+                            "lineId": "oONAis"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    tellFatherExamScore = (score) =\u003e {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 516,
+                                        "endIndex": 554
+                                    }
+                                }
+                            }],
+                            "style": {},
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 515,
+                                "endIndex": 554
+                            },
+                            "lineId": "C8pLDH"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        console.log(`son score is ${score}`)",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 555,
+                                        "endIndex": 599
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 555,
+                                "endIndex": 599
+                            },
+                            "lineId": "IRebR0"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    }",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 600,
+                                        "endIndex": 605
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 600,
+                                "endIndex": 605
+                            },
+                            "lineId": "LIxy2E"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [],
+                            "style": {},
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 606,
+                                "endIndex": 607
+                            },
+                            "lineId": "BvlFQE"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    render() {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 608,
+                                        "endIndex": 622
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 608,
+                                "endIndex": 622
+                            },
+                            "lineId": "EweSI3"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        return (",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 623,
+                                        "endIndex": 639
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 623,
+                                "endIndex": 639
+                            },
+                            "lineId": "Z6H93X"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "            \u003cdiv\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 640,
+                                        "endIndex": 657
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 640,
+                                "endIndex": 657
+                            },
+                            "lineId": "cnMuVa"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "                {/* 通过子组件参数传递回调函数 */}",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 658,
+                                        "endIndex": 695
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 658,
+                                "endIndex": 695
+                            },
+                            "lineId": "QwmxsA"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "                 \u003cSon tell={this.tellFatherExamScore}\u003e\u003c/Son\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 696,
+                                        "endIndex": 756
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 696,
+                                "endIndex": 756
+                            },
+                            "lineId": "7rXbjU"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "            \u003c/div\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 757,
+                                        "endIndex": 775
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 757,
+                                "endIndex": 775
+                            },
+                            "lineId": "E4NsTm"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        )",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 776,
+                                        "endIndex": 785
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 776,
+                                "endIndex": 785
+                            },
+                            "lineId": "K6fR84"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    }",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 786,
+                                        "endIndex": 791
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 786,
+                                "endIndex": 791
+                            },
+                            "lineId": "3hfurV"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "}",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "tkvrwy0oiu",
+                                        "startIndex": 792,
+                                        "endIndex": 793
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "tkvrwy0oiu",
+                                "startIndex": 792,
+                                "endIndex": 793
+                            },
+                            "lineId": "4fRWdF"
+                        }
+                    }]
+                }
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [],
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 122,
+                    "endIndex": 122
+                },
+                "lineId": "skBDI1"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "兄弟组件互相传递",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 124,
+                            "endIndex": 132
+                        }
+                    }
+                }],
+                "style": {
+                    "headingLevel": 2
+                },
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 123,
+                    "endIndex": 132
+                },
+                "lineId": "5QXBQK"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "原始做法，将参数状态提升到兄弟组建的父组件中，然后再通过 子1 -\u003e 父 -\u003e 子2 的实现，达成两个兄弟组件之间组建的互相传递。",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 134,
+                            "endIndex": 199
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 133,
+                    "endIndex": 199
+                },
+                "lineId": "78avkr"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 200,
+                    "endIndex": 201
+                },
+                "lineId": "AVvNFy"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "高级做法，通过发布订阅来实现 参数和父组件之间的解耦。",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 203,
+                            "endIndex": 230
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 202,
+                    "endIndex": 230
+                },
+                "lineId": "cs1bON"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "使用 ",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 232,
+                            "endIndex": 235
+                        }
+                    }
+                }, {
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "pubsub-js",
+                        "style": {
+                            "link": {
+                                "url": "https%3A%2F%2Fgithub.com%2Fmroderick%2FPubSubJS"
+                            }
+                        },
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 235,
+                            "endIndex": 244
+                        }
+                    }
+                }, {
+                    "type": "textRun",
+                    "textRun": {
+                        "text": ", ",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 244,
+                            "endIndex": 246
+                        }
+                    }
+                }, {
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "npm install pubsub-js",
+                        "style": {
+                            "codeInline": true
+                        },
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 246,
+                            "endIndex": 267
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 231,
+                    "endIndex": 267
+                },
+                "lineId": "pYDoLH"
+            }
+        }, {
+            "type": "paragraph",
+            "paragraph": {
+                "elements": [{
+                    "type": "textRun",
+                    "textRun": {
+                        "text": "场景： A 组件通过 AJAX 获取 数据，将数据传到同级 B 组件显示。",
+                        "style": {},
+                        "location": {
+                            "zoneId": "0",
+                            "startIndex": 269,
+                            "endIndex": 306
+                        }
+                    }
+                }],
+                "style": {},
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 268,
+                    "endIndex": 306
+                },
+                "lineId": "1whDB0"
+            }
+        }, {
+            "type": "code",
+            "code": {
+                "language": "JavaScript",
+                "location": {
+                    "zoneId": "0",
+                    "startIndex": 307,
+                    "endIndex": 308
+                },
+                "zoneId": "npuj5apbm1",
+                "body": {
+                    "blocks": [{
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "import PropTypes from 'prop-types'",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 0,
+                                        "endIndex": 34
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 0,
+                                "endIndex": 34
+                            },
+                            "lineId": "pOD51m"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "import PubSub from 'pubsub-js'",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 36,
+                                        "endIndex": 66
+                                    }
+                                }
+                            }],
+                            "style": {},
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 35,
+                                "endIndex": 66
+                            },
+                            "lineId": "qKZLfc"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [],
+                            "style": {},
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 67,
+                                "endIndex": 68
+                            },
+                            "lineId": "aMfZWh"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "class A ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 70,
+                                        "endIndex": 78
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "extends",
+                                    "style": {
+                                        "italic": true
+                                    },
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 78,
+                                        "endIndex": 85
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 85,
+                                        "endIndex": 86
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "Component",
+                                    "style": {
+                                        "underLine": true
+                                    },
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 86,
+                                        "endIndex": 95
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " { ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 95,
+                                        "endIndex": 98
+                                    }
+                                }
+                            }],
+                            "style": {},
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 69,
+                                "endIndex": 98
+                            },
+                            "lineId": "xkM0oT"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 100,
+                                        "endIndex": 104
+                                    }
+                                }
+                            }],
+                            "style": {},
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 99,
+                                "endIndex": 104
+                            },
+                            "lineId": "XnvR4Q"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    click = () =\u003e {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 105,
+                                        "endIndex": 124
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 105,
+                                "endIndex": 124
+                            },
+                            "lineId": "XVqLHU"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        axios.get('xxxxx').then(",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 125,
+                                        "endIndex": 157
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 125,
+                                "endIndex": 157
+                            },
+                            "lineId": "g1wqUq"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "            // 把 response data 发送到 一个 topic",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 158,
+                                        "endIndex": 201
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 158,
+                                "endIndex": 201
+                            },
+                            "lineId": "XEVPEF"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "            ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 202,
+                                        "endIndex": 214
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "response =\u003e {PubSub.publish(\"topic\", response.data)}",
+                                    "style": {
+                                        "backColor": {
+                                            "red": 251,
+                                            "green": 191,
+                                            "blue": 188,
+                                            "alpha": 1
+                                        }
+                                    },
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 214,
+                                        "endIndex": 266
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 202,
+                                "endIndex": 266
+                            },
+                            "lineId": "EF6dAB"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        )",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 267,
+                                        "endIndex": 276
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 267,
+                                "endIndex": 276
+                            },
+                            "lineId": "Fpigcs"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    }",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 277,
+                                        "endIndex": 282
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 277,
+                                "endIndex": 282
+                            },
+                            "lineId": "o0HbwN"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 283,
+                                        "endIndex": 287
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 283,
+                                "endIndex": 287
+                            },
+                            "lineId": "4PCBy8"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    render() {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 288,
+                                        "endIndex": 302
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 288,
+                                "endIndex": 302
+                            },
+                            "lineId": "dcd30z"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        return (",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 303,
+                                        "endIndex": 319
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 303,
+                                "endIndex": 319
+                            },
+                            "lineId": "xGzQzU"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "            \u003cdiv\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 320,
+                                        "endIndex": 337
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 320,
+                                "endIndex": 337
+                            },
+                            "lineId": "LCOS0j"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "                \u003cinput ref={c =\u003e this.param = c}/\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 338,
+                                        "endIndex": 388
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 338,
+                                "endIndex": 388
+                            },
+                            "lineId": "1Sx4Gz"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "                \u003cbutton onClick={this.click}\u003enetworking...\u003cbutton\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 389,
+                                        "endIndex": 455
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 389,
+                                "endIndex": 455
+                            },
+                            "lineId": "cJrLT2"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "            \u003c/div\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 456,
+                                        "endIndex": 474
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 456,
+                                "endIndex": 474
+                            },
+                            "lineId": "2ymwpx"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        )",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 475,
+                                        "endIndex": 484
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 475,
+                                "endIndex": 484
+                            },
+                            "lineId": "r9m0Sb"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    }",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 485,
+                                        "endIndex": 490
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 485,
+                                "endIndex": 490
+                            },
+                            "lineId": "jl8E2U"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "}",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 491,
+                                        "endIndex": 492
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 491,
+                                "endIndex": 492
+                            },
+                            "lineId": "kkpZjP"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 493,
+                                        "endIndex": 494
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 493,
+                                "endIndex": 494
+                            },
+                            "lineId": "AYibJX"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "class",
+                                    "style": {
+                                        "italic": true
+                                    },
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 495,
+                                        "endIndex": 500
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " B ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 500,
+                                        "endIndex": 503
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "extends",
+                                    "style": {
+                                        "italic": true
+                                    },
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 503,
+                                        "endIndex": 510
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 510,
+                                        "endIndex": 511
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "Component",
+                                    "style": {
+                                        "underLine": true
+                                    },
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 511,
+                                        "endIndex": 520
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": " {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 520,
+                                        "endIndex": 522
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 495,
+                                "endIndex": 522
+                            },
+                            "lineId": "H8r1I4"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    callback = (msg, data) =\u003e {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 524,
+                                        "endIndex": 555
+                                    }
+                                }
+                            }],
+                            "style": {},
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 523,
+                                "endIndex": 555
+                            },
+                            "lineId": "gpqg6X"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        console.log('here is response data', data)",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 556,
+                                        "endIndex": 606
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 556,
+                                "endIndex": 606
+                            },
+                            "lineId": "BgoGK2"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    }",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 607,
+                                        "endIndex": 612
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 607,
+                                "endIndex": 612
+                            },
+                            "lineId": "UQVW7s"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 613,
+                                        "endIndex": 617
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 613,
+                                "endIndex": 617
+                            },
+                            "lineId": "8FgIkl"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    componetDidMount() {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 618,
+                                        "endIndex": 642
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 618,
+                                "endIndex": 642
+                            },
+                            "lineId": "Zpmw73"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        // 注册消息订阅的回调函数",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 643,
+                                        "endIndex": 665
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 643,
+                                "endIndex": 665
+                            },
+                            "lineId": "EDKyWe"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 666,
+                                        "endIndex": 674
+                                    }
+                                }
+                            }, {
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "PubSub.subscribe(\"topic\", this.callback)",
+                                    "style": {
+                                        "backColor": {
+                                            "red": 251,
+                                            "green": 191,
+                                            "blue": 188,
+                                            "alpha": 1
+                                        }
+                                    },
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 674,
+                                        "endIndex": 714
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 666,
+                                "endIndex": 714
+                            },
+                            "lineId": "CdFvup"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    }",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 715,
+                                        "endIndex": 720
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 715,
+                                "endIndex": 720
+                            },
+                            "lineId": "Uvfbt5"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 721,
+                                        "endIndex": 725
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 721,
+                                "endIndex": 725
+                            },
+                            "lineId": "XsM9of"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    componentWillUnmount() {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 726,
+                                        "endIndex": 754
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 726,
+                                "endIndex": 754
+                            },
+                            "lineId": "oCe84K"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        // 取消对于某个 topic 的订阅",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 755,
+                                        "endIndex": 782
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 755,
+                                "endIndex": 782
+                            },
+                            "lineId": "ziTrP2"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        PubSub.unsubscribe(\"topic\")",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 783,
+                                        "endIndex": 818
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 783,
+                                "endIndex": 818
+                            },
+                            "lineId": "YhWm2X"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    }",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 819,
+                                        "endIndex": 824
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 819,
+                                "endIndex": 824
+                            },
+                            "lineId": "H14dqN"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    ",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 825,
+                                        "endIndex": 829
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 825,
+                                "endIndex": 829
+                            },
+                            "lineId": "kZxCU3"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    render() {",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 830,
+                                        "endIndex": 844
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 830,
+                                "endIndex": 844
+                            },
+                            "lineId": "iffbXk"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        return (",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 845,
+                                        "endIndex": 861
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 845,
+                                "endIndex": 861
+                            },
+                            "lineId": "5mrILR"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "            \u003cdiv\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 862,
+                                        "endIndex": 879
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 862,
+                                "endIndex": 879
+                            },
+                            "lineId": "0Z6p9r"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "                 \u003cSon tell={this.tellFatherExamScore}\u003e\u003c/Son\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 880,
+                                        "endIndex": 940
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 880,
+                                "endIndex": 940
+                            },
+                            "lineId": "MSJFUT"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "            \u003c/div\u003e",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 941,
+                                        "endIndex": 959
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 941,
+                                "endIndex": 959
+                            },
+                            "lineId": "Pk7aSY"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "        )",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 960,
+                                        "endIndex": 969
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 960,
+                                "endIndex": 969
+                            },
+                            "lineId": "VCOiea"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "    }",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 970,
+                                        "endIndex": 975
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 970,
+                                "endIndex": 975
+                            },
+                            "lineId": "S7sNPK"
+                        }
+                    }, {
+                        "type": "paragraph",
+                        "paragraph": {
+                            "elements": [{
+                                "type": "textRun",
+                                "textRun": {
+                                    "text": "}",
+                                    "style": {},
+                                    "location": {
+                                        "zoneId": "npuj5apbm1",
+                                        "startIndex": 976,
+                                        "endIndex": 977
+                                    }
+                                }
+                            }],
+                            "location": {
+                                "zoneId": "npuj5apbm1",
+                                "startIndex": 976,
+                                "endIndex": 977
                             }
                         }
                     }]
@@ -596,420 +3242,13 @@
         }, {
             "type": "paragraph",
             "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "出于对老东家产品的信任，首先看第一点，飞书文档前端抛出来的错",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 550,
-                            "endIndex": 580
-                        }
-                    }
-                }],
-                "style": {},
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 549,
-                    "endIndex": 580
-                },
-                "lineId": "HUOcrL"
-            }
-        }, {
-            "type": "gallery",
-            "gallery": {
-                "galleryStyle": {},
-                "imageList": [{
-                    "fileToken": "boxcnct96P1cbuXCbOOoaEPITTU",
-                    "width": 1808,
-                    "height": 952
-                }],
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 581,
-                    "endIndex": 583
-                }
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "Error: Minified React error #185; 咱也看不懂这种前端报错，贴到 Google 看 issue。",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 584,
-                            "endIndex": 648
-                        }
-                    }
-                }],
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 584,
-                    "endIndex": 648
-                },
-                "lineId": "QwzwbR"
-            }
-        }, {
-            "type": "undefinedBlock",
-            "undefinedBlock": {
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 649,
-                    "endIndex": 651
-                }
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "看到一条貌似有点像原因的 reply",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 652,
-                            "endIndex": 670
-                        }
-                    }
-                }],
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 652,
-                    "endIndex": 670
-                },
-                "lineId": "zIqCGs"
-            }
-        }, {
-            "type": "gallery",
-            "gallery": {
-                "galleryStyle": {},
-                "imageList": [{
-                    "fileToken": "boxcn3KUwOkpSnq4QoueGgLqQ2f",
-                    "width": 1189,
-                    "height": 342
-                }],
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 671,
-                    "endIndex": 673
-                }
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "意思是 setState 这个函数被放到 React 生命周期hook 中的 componentDidUpdate 函数里面了。而 componentDidUpdate 又会在每个 setState 调用时触发，这样无穷递归循环下去，导致调用栈深度超出浏览器限制。 好有道理啊！",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 674,
-                            "endIndex": 813
-                        }
-                    }
-                }],
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 674,
-                    "endIndex": 813
-                },
-                "lineId": "pUkWDr"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "应该是问题导致的原因了，然而并没有啥用呀，没法定位到具体地方，也没法帮我解决问题。我放弃了第一个嫌疑人。",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 815,
-                            "endIndex": 867
-                        }
-                    }
-                }],
-                "style": {},
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 814,
-                    "endIndex": 867
-                },
-                "lineId": "X8sNZz"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "第二个第三个嫌疑人也很好验证。清浏览器缓存，换一个浏览器，拔掉显示器.... 这些操作我都尝试一下，问题依然没有得到解决。总不能是玄学吧🤐？",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 869,
-                            "endIndex": 940
-                        }
-                    }
-                }],
-                "style": {},
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 868,
-                    "endIndex": 940
-                },
-                "lineId": "JdFC3S"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [],
-                "style": {},
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 941,
-                    "endIndex": 942
-                },
-                "lineId": "ulrqwY"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "排查问题是需要方法的，别人用我的账号登录飞书文档没有这个问题，但我的所有电脑的浏览器都有这个问题。其实到这了就是一个在我的几台电脑中找相同，在我的电脑和别人的电脑之间找相同的游戏了。",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 944,
-                            "endIndex": 1035
-                        }
-                    }
-                }],
-                "style": {},
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 943,
-                    "endIndex": 1035
-                },
-                "lineId": "5Ocnag"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "我的几台电脑的浏览器的共同之处？我的 chrome 会同步我的所有的 chrome extension 呀！想到这了，其实我心里基本上已经有了答案了。我之前其实就写过一个 chrome extension",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 1037,
-                            "endIndex": 1139
-                        }
-                    }
-                }],
-                "style": {},
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 1036,
-                    "endIndex": 1139
-                },
-                "lineId": "CwmLvi"
-            }
-        }, {
-            "type": "undefinedBlock",
-            "undefinedBlock": {
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 1140,
-                    "endIndex": 1142
-                }
-            }
-        }, {
-            "type": "gallery",
-            "gallery": {
-                "galleryStyle": {},
-                "imageList": [{
-                    "fileToken": "boxcnZEHVyiq6zzuewU0aciRqth",
-                    "width": 1807,
-                    "height": 1080
-                }],
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 1143,
-                    "endIndex": 1145
-                }
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "其中有个 bug 就是",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 1147,
-                            "endIndex": 1158
-                        }
-                    }
-                }, {
-                    "type": "textRun",
-                    "textRun": {
-                        "text": " extension 的全局 css 导致网页显示出错",
-                        "style": {
-                            "backColor": {
-                                "red": 255,
-                                "green": 246,
-                                "blue": 122,
-                                "alpha": 0.8
-                            }
-                        },
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 1158,
-                            "endIndex": 1185
-                        }
-                    }
-                }, {
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "。在经过对我的所有 chrome extension 进行二分搜索排查后，定位到是",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 1185,
-                            "endIndex": 1226
-                        }
-                    }
-                }],
-                "style": {},
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 1146,
-                    "endIndex": 1226
-                },
-                "lineId": "odCpsM"
-            }
-        }, {
-            "type": "gallery",
-            "gallery": {
-                "galleryStyle": {},
-                "imageList": [{
-                    "fileToken": "boxcn1LD3LkbmULWRvoR8Zp0WWf",
-                    "width": 1808,
-                    "height": 952
-                }],
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 1227,
-                    "endIndex": 1229
-                }
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "这个 百度划词翻译 插件的问题。（想不到你这个白白胖胖的百度翻译插件还会做这种事情😵",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 1230,
-                            "endIndex": 1273
-                        }
-                    }
-                }],
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 1230,
-                    "endIndex": 1273
-                },
-                "lineId": "82nHyy"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "解法很简单，直接禁用这个插件即可。我终于又能享受飞书文档丝滑的服务了~",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 1275,
-                            "endIndex": 1310
-                        }
-                    }
-                }],
-                "style": {},
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 1274,
-                    "endIndex": 1310
-                },
-                "lineId": "ARygLU"
-            }
-        }, {
-            "type": "gallery",
-            "gallery": {
-                "imageList": [{
-                    "fileToken": "boxcndIwiSDncuMeTm48xJdWAwc",
-                    "width": 1000,
-                    "height": 750
-                }],
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 1311,
-                    "endIndex": 1312
-                }
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
-                "elements": [{
-                    "type": "textRun",
-                    "textRun": {
-                        "text": "（欢迎点赞投币一键三连~）",
-                        "style": {},
-                        "location": {
-                            "zoneId": "0",
-                            "startIndex": 1314,
-                            "endIndex": 1327
-                        }
-                    }
-                }],
-                "style": {
-                    "align": "center"
-                },
-                "location": {
-                    "zoneId": "0",
-                    "startIndex": 1313,
-                    "endIndex": 1327
-                },
-                "lineId": "tSrpgI"
-            }
-        }, {
-            "type": "paragraph",
-            "paragraph": {
                 "elements": [],
                 "location": {
                     "zoneId": "0",
-                    "startIndex": 1328,
-                    "endIndex": 1328
+                    "startIndex": 309,
+                    "endIndex": 309
                 },
-                "lineId": "B3qLBO"
+                "lineId": "PqtrQD"
             }
         }]
     }

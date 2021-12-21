@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 import './articlePreview.css'
 
-// todo fix preview 不展示具体信息
+// preview 不展示具体信息。不要走任何 parser
 class ArticlePreview extends Component {
 
     static propTypes = {
