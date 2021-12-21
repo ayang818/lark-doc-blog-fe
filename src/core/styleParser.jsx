@@ -45,11 +45,15 @@ const styleTypeParserDict = {
                 style: {
                     fontSize: `${1 + 0.6/level}rem`,
                 },
-                strong: true
+                strong: true,
+                className: `title-${level}`
             })
             finalVDOMs.push(newDOM)
         }
         return {
+            style: {
+                margin: '10px 0 10px 0'
+            },
             vdoms: finalVDOMs
         }
     },

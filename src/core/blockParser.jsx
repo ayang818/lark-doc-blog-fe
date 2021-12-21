@@ -1,11 +1,21 @@
 import { v4 as uuidv4 } from 'uuid';
 import { Typography } from '@douyinfe/semi-ui'
+import { IconComponentPlaceholderStroked, IconCopy } from '@douyinfe/semi-icons'
 import ImageShow from '../component/Typography/ImageShow';
 import { styleCaster } from './styleParser';
 import { Prism as CodeBlocks } from 'react-syntax-highlighter';
+import { Notification } from '@douyinfe/semi-ui';
+
 
 // TODO 如何封装一个组件
 const {Text:OLText, Title:OLTitle, Paragraph:OLParagraph} = Typography
+
+// deprecated: 段落首行 + 空格
+const firstLineSpace = (vdoms) => {
+    if (vdoms.length <= 0) return ''
+    if (vdoms[0].props.className.startsWith('title-')) return ''
+    return '\xa0\xa0\xa0\xa0'
+}
 
 // paragraph block parser
 const paragraph = (block) => {
@@ -24,10 +34,10 @@ const paragraph = (block) => {
     }
     console.debug('before vdoms', vdoms)
     // 对整个 block 进行样式转换，拿到标准的 css 和 props
-    let {styleDict, elementPropsDict, vdomList:wrapperedVDOM} = styleCaster(styleTypeDict, vdoms)
-    console.debug('style parsed vdoms', wrapperedVDOM)
+    let {styleDict, elementPropsDict, vdomList:wrapperedVDOMs} = styleCaster(styleTypeDict, vdoms)
+    console.debug('style parsed vdoms', wrapperedVDOMs)
     // 传递 style 和 props，渲染整个节点
-    return <OLParagraph spacing='extended' style={styleDict} key={lineId} {...elementPropsDict}>{wrapperedVDOM}</OLParagraph>
+    return <OLParagraph spacing='extended' style={styleDict} key={lineId} {...elementPropsDict}>{wrapperedVDOMs}</OLParagraph>
 }
 
 // textRun block parser
@@ -55,28 +65,52 @@ const gallery = (block) => {
 // code block parser
 const code = (block) => {
     let {code} = block
-    let {language:lang, body:{blocks:codeBlocks}} = code
-    let vdoms = []
+    let {language:lang, body} = code
     let codeText = ""
-    let len = codeBlocks.length
-    for (let i = 0; i < len; i++) {
-        let codeBlock = codeBlocks[i]
-        // vdoms.push(parseBlock(codeBlock))
-        let {paragraph:{elements}} = codeBlock
-        if (elements.length === 0) continue
-        for (let elem of elements) {
-            let {textRun:{text:plainText}} = elem
-            codeText += plainText
-        }
-        if (i != len - 1) {
-            codeText += '\n'
+    if (body) {
+        let {block:codeBlocks} = body
+        let len = codeBlocks.length
+        for (let i = 0; i < len; i++) {
+            let codeBlock = codeBlocks[i]
+            // vdoms.push(parseBlock(codeBlock))
+            let {paragraph:{elements}} = codeBlock
+            if (elements.length === 0) continue
+            for (let elem of elements) {
+                let {textRun:{text:plainText}} = elem
+                codeText += plainText
+            }
+            if (i != len - 1) {
+                codeText += '\n'
+            }
         }
     }
+    const copyText = async (text) => {
+        try{
+            const clipboard = navigator.clipboard;
+            await clipboard.writeText(codeText)
+            Notification.info({
+                duration: 3,
+                position: 'bottom',
+                content: 'Copy succeeded!',
+                title: '已复制到剪贴板',
+            })
+        }  catch (err) {
+            console.error(err)
+        }     
+    }
     // TODO 这里如何做到局部高亮？代码的局部高亮很重要！
-    return <CodeBlocks language={lang.toLowerCase()}>
-       {/* {vdoms} */}
-       {codeText}
-    </CodeBlocks>
+    return <div>
+            <div style={{
+                width: '120%',
+                padding: '8px 16px 8px 16px',
+                background: 'rgb(245, 242, 240)',
+                borderBottom: '1px solid rgba(var(--semi-grey-2), 1)'
+            }} onClick={() => copyText(codeText)}><IconCopy/></div>
+            <CodeBlocks language={lang.toLowerCase()} customStyle={{width: '120%', marginTop: '0'}}>
+                {/* {vdoms} */}
+                {codeText}
+            </CodeBlocks>
+            </div>
 }
 
 const blockParserDict = {
