@@ -2,3 +2,21 @@
     padding: 20px 0 20px 0;
     border-bottom: 0.5px solid rgba(var(--semi-grey-1), 1);
 }
+
+.flex-inline {
+    display: flex;
+    align-items: center;
+}
+
+.triangleBackground {
+    padding: 5px;
+    color: rgba(var(--semi-grey-9), 1);
+}
+
+.hoverBackground:hover {
+    background: rgba(var(--semi-grey-1), 1);
+}
+
+.iconRotate {
+    transform: rotate(45deg);
+}

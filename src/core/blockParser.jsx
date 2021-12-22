@@ -64,11 +64,18 @@ const gallery = (block) => {
 
 // code block parser
 const code = (block) => {
-    let {code} = block
-    let {language:lang, body} = code
-    let codeText = ""
-    if (body) {
-        let {block:codeBlocks} = body
+    console.log(block)
+    const getPlainText = (block) => {
+        let {code} = block
+        let {body} = code
+        let codeText = ""
+        if (!body) {
+            return codeText
+        }
+        let {blocks:codeBlocks} = body
+        if (!codeBlocks) {
+            return codeText
+        }
         let len = codeBlocks.length
         for (let i = 0; i < len; i++) {
             let codeBlock = codeBlocks[i]
@@ -83,7 +90,11 @@ const code = (block) => {
                 codeText += '\n'
             }
         }
+        return codeText
     }
+    let {code} = block
+        let {language:lang, body} = code
+    let codeText = getPlainText(block)
     const copyText = async (text) => {
         try{
             const clipboard = navigator.clipboard;
