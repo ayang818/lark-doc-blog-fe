@@ -44,7 +44,8 @@ const paragraph = (block) => {
 const textRun = (block) => {
     let {text, style} = block
     // 将所有的空格都换成能 html 能解析的形式，否则多个空格会被解析成一个
-    text = String(text).replaceAll(' ', '\xa0')
+    // TODO how to fix it
+    // text = String(text).replaceAll(' ', '\xa0')
     let {styleDict, elementPropsDict} = styleCaster(style)
     let atomicVDOM = <OLText style={styleDict} key={uuidv4()}>{text}</OLText>
     return atomicVDOM

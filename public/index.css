@@ -3,8 +3,9 @@ html {
     height: 100%;
     background: rgba(var(--semi-grey-0), 1);
 }
+
 body {
-    margin: 0 0 0 0;
-    overflow-x: hidden;
-    background: rgba(var(--semi-grey-0), 1);
+    margin: 0!important;
+    overflow-x: hidden!important;
+    background: rgba(var(--semi-grey-0), 1)!important;
 }

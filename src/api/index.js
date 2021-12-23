@@ -7,7 +7,7 @@ export const  getChildrenNodes = async (parentToken='default') => {
 }
 
 
-export const getNodeContent = async (wikiToken) => {
+export const getNodeContent = async (wikiToken='wikcnojbE0C0j2C8tNgKdjOBqRh') => {
     let resp = await axios.get(`/doc/${wikiToken}`)
     return resp
 }

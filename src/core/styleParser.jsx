@@ -82,7 +82,6 @@ const styleTypeParserDict = {
             // 计算这个 list item 前面需要几组空格
             let space = ''
             for (let i =0;i<indentLevel-1;i++){
-                // space += "<pre>&nbsp;&nbsp;&nbsp;&nbsp;</pre>"
                 space += "\xa0\xa0\xa0\xa0\xa0\xa0"
             }
             let newChildren
