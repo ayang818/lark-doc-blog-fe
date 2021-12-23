@@ -85,9 +85,9 @@ class Article extends Component {
         const {titleVdom, bodyVdom, wikiToken} = this.state
         return (
             <div >
-                <Row>
-                    <Col span={7}></Col>
-                    <Col span={10} className='article-border'>
+                <Row gutter={{xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24}}>
+                    <Col xs={3} sm={7} md={7} lg={7} xl={7} xxl={7}></Col>
+                    <Col xs={18} sm={10} md={10} lg={10} xl={10} xxl={10} className='article-border'>
                         <div className='prev-title'>
                             {
                                 titleVdom
@@ -99,7 +99,7 @@ class Article extends Component {
                             }
                         </div>
                     </Col>
-                    <Col span={7}></Col>
+                    <Col xs={3} sm={7} md={7} lg={7} xl={7} xxl={7}></Col>
                 </Row>
             </div>
         )

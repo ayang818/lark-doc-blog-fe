@@ -32,9 +32,9 @@ export default class BlogIndex extends Component {
         const { Text, Title } = Typography;
         return (
             <div>
-                <Row>
-                    <Col span={7}></Col>
-                    <Col span={10}>
+                <Row gutter={{xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24}}>
+                    <Col xs={3} sm={7} md={7} lg={7} xl={7} xxl={7}></Col>
+                    <Col xs={18} sm={10} md={10} lg={10} xl={10} xxl={10}>
                         {
                             this.state.articles.map((article) => {
                                 const {doc_token:docToken, title, create_time:createTime, wiki_token:wikiToken, latest_modify_time:modifyTime, has_child:hasChild} = article
@@ -43,7 +43,7 @@ export default class BlogIndex extends Component {
                         }
                         
                     </Col>
-                    <Col span={7}></Col>
+                    <Col xs={3} sm={7} md={7} lg={7} xl={7} xxl={7}></Col>
                 </Row>
             </div>
         )
