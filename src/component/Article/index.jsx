@@ -11,7 +11,9 @@ class Article extends Component {
     state = {
         titleVdom: '',
         bodyVdom: '',
-        wikiToken: ''
+        wikiToken: '',
+        catelogue: [],
+        catelogueRendered: false
     }
 
     static propsTypes = {
@@ -35,7 +37,7 @@ class Article extends Component {
             // 不要 ? 后面的param
             wikiToken = wikiToken.split('?')[0]
         }
-        this.setState({wikiToken})
+        // this.setState({wikiToken})
         // 拿到文章的 json 内容解析并放到 state
         getNodeContent(wikiToken).then(
             resp => {
@@ -43,7 +45,7 @@ class Article extends Component {
                 let content = JSON.parse(article.content)
                 let titleVdom = parseTitle(content)
                 let bodyVdom = parseBody(content)
-                this.setState({titleVdom, bodyVdom})
+                this.setState({titleVdom, bodyVdom, wikiToken})
             },
             err => {
                 console.error(err)
@@ -72,6 +74,60 @@ class Article extends Component {
                 }
             )
         }
+        if (!this.state.catelogueRendered) {
+            // 生成目录
+            let catelogueItems = document.getElementsByClassName('v-title')
+            console.log(catelogueItems)
+            let catelogue = []
+            for (let item of catelogueItems) {
+                let res = item.className.split(' ').filter((item) => {
+                    return item.search('title-level-') !== -1
+                })
+                let levelClassName = res[0]
+                let level = Number(levelClassName.charAt(levelClassName.length - 1))
+                let text = item.innerText
+                catelogue.push({level, text, marginLeft: 0})
+            }
+            // 标题offset计算算法 O(n^2)
+            // 每一位向前扫描，
+            // 如果有相同的；那么 同步margin。
+            // 如果没有相同；
+            // 若新level最小或中等，将所有 level > 新 level 的 margin + 1
+            // 若新level最大，拿当前level最大的 margin + 1
+            let len = catelogue.length
+            let biggestLevelPair =  {
+                level: -1,
+                marginLeft: 0
+            }
+            for (let i = 0; i < len; i++) {
+                let newItem = catelogue[i]
+                console.log('item', newItem)
+                if (i !== 0) {
+                    for (let j = 0; j < i; j++) {
+                        let compareItem = catelogue[j]
+                        if (newItem.level === compareItem.level) {
+                            newItem.marginLeft = compareItem.marginLeft
+                            catelogue[i] = newItem
+                            break
+                        } else if (newItem.level < compareItem.level) {
+                            compareItem.marginLeft += 1
+                            catelogue[j]= compareItem
+                        }
+                    }
+                }
+                if (newItem.level > biggestLevelPair.level) {
+                    if (biggestLevelPair.level != -1) {
+                        newItem.marginLeft = biggestLevelPair.marginLeft + 1
+                    }
+                    biggestLevelPair = {
+                        level: newItem.level,
+                        marginLeft: newItem.marginLeft
+                    }
+                }
+                catelogue[i] = newItem
+            }
+            this.setState({catelogue, catelogueRendered: true})
+        }
     }
 
     // TODO render 次数多
@@ -81,12 +137,22 @@ class Article extends Component {
         document.body.style.margin = '0'
         document.body.style.background = 'rgba(var(--semi-grey-0), 1)'
         document.body.style.overflowX = 'hidden'
-
-        const {titleVdom, bodyVdom, wikiToken} = this.state
+        const { Text } = Typography
+        const {titleVdom, bodyVdom, wikiToken, catelogue} = this.state
         return (
             <div >
                 <Row gutter={{xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24}}>
-                    <Col xs={3} sm={7} md={7} lg={7} xl={7} xxl={7}></Col>
+                    <Col xs={3} sm={7} md={7} lg={7} xl={7} xxl={7}>
+                        <div style={{position: 'fixed', top: '20%', left: '20px'}}>
+                            {
+                                catelogue.map(item => {
+                                    return <div>
+                                    <Text className={`catelogue-level-${item.level}`} style={{marginLeft: `${item.marginLeft}em`}}>{item.text}</Text><br/>
+                                    </div>
+                                })
+                            }
+                        </div>
+                    </Col>
                     <Col xs={18} sm={10} md={10} lg={10} xl={10} xxl={10} className='article-border'>
                         <div className='prev-title'>
                             {
