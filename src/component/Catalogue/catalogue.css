@@ -1,0 +1,19 @@
+.catalogue-list {
+    position: fixed;
+    top: 30%;
+    left: 30px;
+    padding: 20px;
+    width: 15%;
+    border: 1px solid rgba(var(--semi-grey-1), 1);
+    border-radius: 5px;
+    background: rgba(var(--semi-grey-0), 1);
+}
+
+.txt-nodeco {
+    text-decoration: none;
+    color: rgba(var(--semi-grey-9), 0.5)!important;
+}
+
+.txt-active {
+    color: rgba(var(--semi-blue-5), 1)!important;
+}

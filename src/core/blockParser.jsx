@@ -65,7 +65,6 @@ const gallery = (block) => {
 
 // code block parser
 const code = (block) => {
-    console.log(block)
     const getPlainText = (block) => {
         let {code} = block
         let {body} = code

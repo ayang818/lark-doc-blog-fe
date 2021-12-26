@@ -105,9 +105,9 @@ const styleTypeParserDict = {
             let newVDOM = cloneElement(vdom, {
                 className
             }, newChildren)
-            if (space.length != 0) {
-                console.warn(newVDOM)
-            }
+            // if (space.length != 0) {
+            //     console.warn(newVDOM)
+            // }
             finalVDOMs.push(newVDOM)
             firstPrefix = false
         }
@@ -117,7 +117,6 @@ const styleTypeParserDict = {
     },
     backColor: (colorDict) => {
         let {red, green, blue, alpha} = colorDict
-        console.warn(red, green)
         return {
             style: {
                 background: `rgba(${red}, ${green}, ${blue}, ${alpha})`
