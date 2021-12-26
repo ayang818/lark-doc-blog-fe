@@ -2,3 +2,21 @@
     padding: 20px 0 20px 0;
     border-bottom: 0.5px solid rgba(var(--semi-grey-1), 1);
 }
+
+.catalogue-list {
+    position: fixed;
+    top: 30%;
+    left: 30px;
+    padding: 20px 10px 20px 10px;
+    border: 1px solid rgba(var(--semi-grey-1), 1);
+    border-radius: 2px;
+}
+
+.txt-nodeco {
+    text-decoration: none;
+    color: rgba(var(--semi-grey-9), 1)!important;
+}
+
+.txt-active {
+    color: rgba(var(--semi-light-blue-4), 1)!important;
+}

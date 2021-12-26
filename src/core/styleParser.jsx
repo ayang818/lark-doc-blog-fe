@@ -1,4 +1,5 @@
 import { cloneElement } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 // style 转换器入口，将 json 中的 style 转化为标准 css 和 组件的 props。可修改 children 内容
 export const styleCaster = (styleTypeDict, vdoms) => {
@@ -46,7 +47,8 @@ const styleTypeParserDict = {
                     fontSize: `${1 + 0.6/level}rem`,
                 },
                 strong: true,
-                className: `title-level-${level} v-title`
+                className: `title-level-${level} v-title`,
+                id: uuidv4()
             })
             finalVDOMs.push(newDOM)
         }

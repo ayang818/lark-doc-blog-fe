@@ -12,8 +12,9 @@ class Article extends Component {
         titleVdom: '',
         bodyVdom: '',
         wikiToken: '',
-        catelogue: [],
-        catelogueRendered: false
+        catalogue: [],
+        catalogueDom: [],
+        catalogueRendered: false
     }
 
     static propsTypes = {
@@ -26,7 +27,35 @@ class Article extends Component {
         direct: false
     }
 
+    initUpdateCatalogueActiveStatusEvent = () => {
+        // 注册窗口滚动监听事件
+        window.onscroll = () => {
+            let {catalogueDom, catalogue} = this.state
+            let len = catalogueDom.length
+            let scrollTop =  document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+            let activeTitleIdx = -1
+            for (let i = 0; i < len; i++) {
+                let dom = catalogueDom[i]
+                console.log(dom.offsetTop, scrollTop)
+                let offset = dom.offsetTop - scrollTop
+                if (offset > 20) {
+                    break
+                }
+                activeTitleIdx = i
+            }
+            if (activeTitleIdx !== -1) {
+                // clear active status
+                for (let item of catalogue) {
+                    item.active = false
+                }
+                catalogue[activeTitleIdx].active = true
+            }
+            this.setState({catalogue})
+        }
+    }
+
     componentDidMount = () => {
+        this.initUpdateCatalogueActiveStatusEvent()
         let {wikiToken, direct} = this.props
         console.log(this.props)
         // 如果不是直接传入 wikiToken，那就尝试去 url 去拿
@@ -53,6 +82,48 @@ class Article extends Component {
         )
     }
 
+    calcCatalogueItemMarginLeft = (catalogue) => {
+        // 标题offset计算算法 O(n^2)
+        // 每一位向前扫描，
+        // 如果有相同的；那么 同步margin。
+        // 如果没有相同；
+        // 若新level最小或中等，将所有 level > 新 level 的 margin + 1
+        // 若新level最大，拿当前level最大的 margin + 1
+        let len = catalogue.length
+        let biggestLevelPair =  {
+            level: -1,
+            marginLeft: 0
+        }
+        for (let i = 0; i < len; i++) {
+            let newItem = catalogue[i]
+            console.log('item', newItem)
+            if (i !== 0) {
+                for (let j = 0; j < i; j++) {
+                    let compareItem = catalogue[j]
+                    if (newItem.level === compareItem.level) {
+                        newItem.marginLeft = compareItem.marginLeft
+                        catalogue[i] = newItem
+                        break
+                    } else if (newItem.level < compareItem.level) {
+                        compareItem.marginLeft += 1
+                        catalogue[j]= compareItem
+                    }
+                }
+            }
+            if (newItem.level > biggestLevelPair.level) {
+                if (biggestLevelPair.level != -1) {
+                    newItem.marginLeft = biggestLevelPair.marginLeft + 1
+                }
+                biggestLevelPair = {
+                    level: newItem.level,
+                    marginLeft: newItem.marginLeft
+                }
+            }
+            catalogue[i] = newItem
+        }
+        return catalogue
+    }
+
     componentDidUpdate = () => {
         console.log('update')
         let urlParams = window.location.href.split('/')
@@ -74,59 +145,23 @@ class Article extends Component {
                 }
             )
         }
-        if (!this.state.catelogueRendered) {
+        if (!this.state.catalogueRendered) {
             // 生成目录
-            let catelogueItems = document.getElementsByClassName('v-title')
-            console.log(catelogueItems)
-            let catelogue = []
-            for (let item of catelogueItems) {
+            let catalogueItems = document.getElementsByClassName('v-title')
+            console.log(catalogueItems)
+            let catalogue = []
+            for (let item of catalogueItems) {
                 let res = item.className.split(' ').filter((item) => {
                     return item.search('title-level-') !== -1
                 })
                 let levelClassName = res[0]
                 let level = Number(levelClassName.charAt(levelClassName.length - 1))
                 let text = item.innerText
-                catelogue.push({level, text, marginLeft: 0})
+                let id = item.id
+                catalogue.push({level, text, marginLeft: 0, id, active: false})
             }
-            // 标题offset计算算法 O(n^2)
-            // 每一位向前扫描，
-            // 如果有相同的；那么 同步margin。
-            // 如果没有相同；
-            // 若新level最小或中等，将所有 level > 新 level 的 margin + 1
-            // 若新level最大，拿当前level最大的 margin + 1
-            let len = catelogue.length
-            let biggestLevelPair =  {
-                level: -1,
-                marginLeft: 0
-            }
-            for (let i = 0; i < len; i++) {
-                let newItem = catelogue[i]
-                console.log('item', newItem)
-                if (i !== 0) {
-                    for (let j = 0; j < i; j++) {
-                        let compareItem = catelogue[j]
-                        if (newItem.level === compareItem.level) {
-                            newItem.marginLeft = compareItem.marginLeft
-                            catelogue[i] = newItem
-                            break
-                        } else if (newItem.level < compareItem.level) {
-                            compareItem.marginLeft += 1
-                            catelogue[j]= compareItem
-                        }
-                    }
-                }
-                if (newItem.level > biggestLevelPair.level) {
-                    if (biggestLevelPair.level != -1) {
-                        newItem.marginLeft = biggestLevelPair.marginLeft + 1
-                    }
-                    biggestLevelPair = {
-                        level: newItem.level,
-                        marginLeft: newItem.marginLeft
-                    }
-                }
-                catelogue[i] = newItem
-            }
-            this.setState({catelogue, catelogueRendered: true})
+            catalogue = this.calcCatalogueItemMarginLeft(catalogue)
+            this.setState({catalogue, catalogueRendered: true, catalogueDom: catalogueItems})
         }
     }
 
@@ -138,20 +173,30 @@ class Article extends Component {
         document.body.style.background = 'rgba(var(--semi-grey-0), 1)'
         document.body.style.overflowX = 'hidden'
         const { Text } = Typography
-        const {titleVdom, bodyVdom, wikiToken, catelogue} = this.state
+        const {titleVdom, bodyVdom, wikiToken, catalogue} = this.state
         return (
             <div >
                 <Row gutter={{xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24}}>
                     <Col xs={3} sm={7} md={7} lg={7} xl={7} xxl={7}>
-                        <div style={{position: 'fixed', top: '20%', left: '20px'}}>
+                        {
+                            catalogue.length > 0 ? 
+                            (<div className='catalogue-list'>
                             {
-                                catelogue.map(item => {
+                                catalogue.map(item => {
+                                    {/* TODO 这里的 id 不一样？ */}
                                     return <div>
-                                    <Text className={`catelogue-level-${item.level}`} style={{marginLeft: `${item.marginLeft}em`}}>{item.text}</Text><br/>
+                                    <Text className={`catalogue-level-${item.level}`} style={{marginLeft: `${item.marginLeft}em`}}>
+                                        <a href={`#${item.id}`} className={`txt-nodeco ${item.active ? 'txt-active' : ''}`}>
+                                            {item.text}
+                                        </a>
+                                    </Text><br/>
                                     </div>
                                 })
                             }
-                        </div>
+                            </div>) :
+                            <div></div>
+                        }
+                        
                     </Col>
                     <Col xs={18} sm={10} md={10} lg={10} xl={10} xxl={10} className='article-border'>
                         <div className='prev-title'>

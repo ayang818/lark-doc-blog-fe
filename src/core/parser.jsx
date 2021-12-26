@@ -12,7 +12,6 @@ export const parseBody = (all) => {
     let {body} = all
     let blocks = body.blocks
     let vdoms = []
-    let catalogue = []
     for (let block of blocks) {
         vdoms.push(parseBlock(block))
     }
