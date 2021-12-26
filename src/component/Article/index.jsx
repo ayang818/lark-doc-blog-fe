@@ -5,6 +5,8 @@ import './article.css'
 import { parseBody, parseTitle } from '../../core/parser';
 import { getNodeContent } from '../../api';
 import Catalogue from '../Catalogue';
+import PubSub from 'pubsub-js';
+import { articleTopic } from '../../topic/topic';
 
 // todo fix preview 不展示具体信息
 class Article extends Component {
@@ -13,7 +15,6 @@ class Article extends Component {
         titleVdom: '',
         bodyVdom: '',
         wikiToken: '',
-        rendered: false
     }
 
     static propsTypes = {
@@ -44,7 +45,8 @@ class Article extends Component {
                 let content = JSON.parse(article.content)
                 let titleVdom = parseTitle(content)
                 let bodyVdom = parseBody(content)
-                this.setState({titleVdom, bodyVdom, wikiToken, rendered: true})
+                // setState 异步，会有bug
+                this.setState({titleVdom, bodyVdom, wikiToken})
                 console.log("article rendered finished")
             },
             err => {
@@ -54,24 +56,38 @@ class Article extends Component {
     }
 
     componentDidMount = () => {
+        console.log('article mount')
         let {wikiToken, direct} = this.props
         // 如果不是直接传入 wikiToken，那就尝试去 url 去拿
         if (!direct) {
             wikiToken = this.getWikiTokenFromUrl()
         }
-        // this.setState({wikiToken})
         this.getDocContent(wikiToken)
     }
 
-    
     componentDidUpdate = () => {
-        console.log('update view')
+        console.log('article update')
         let wikiToken = this.getWikiTokenFromUrl()
-        let { direct } = this.props
-        // 切换界面，强制 reload
-        if ((direct && this.state.wikiToken) || (!direct && wikiToken !== this.state.wikiToken)) {
-            this.getDocContent()
+        if (!wikiToken) {
+            let {wikiToken:token} = this.props
+            if (token) {
+                wikiToken = token
+            } else {
+                console.error('wikiToken 不得为空!')
+                return
+            }
         }
+        // 如果是 direct ，第一次进到这里后，wikiToken 应该是空的，getDocContent 会设置好
+        // 强制刷新
+        if (wikiToken !== this.state.wikiToken) {
+            this.getDocContent(wikiToken)
+        }
+        let {catalogue, catalogueItems:catalogueDom} = this.renderCatalogue()
+        // 不通过 setState 下传
+        PubSub.publish(articleTopic, {
+            catalogue,
+            catalogueDom
+        })
     }
 
     // TODO render 次数多
@@ -82,12 +98,12 @@ class Article extends Component {
         document.body.style.background = 'rgba(var(--semi-grey-0), 1)'
         document.body.style.overflowX = 'hidden'
         const { Text } = Typography
-        const {titleVdom, bodyVdom, wikiToken, rendered} = this.state
+        const {titleVdom, bodyVdom, wikiToken, catalogue} = this.state
         return (
             <div >
                 <Row gutter={{xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24}}>
                     <Col xs={3} sm={7} md={7} lg={7} xl={7} xxl={7}>
-                        <Catalogue articleRendered={rendered}></Catalogue>
+                        <Catalogue></Catalogue>
                     </Col>
                     <Col xs={18} sm={10} md={10} lg={10} xl={10} xxl={10} className='article-border'>
                         <div className='prev-title'>
@@ -105,6 +121,72 @@ class Article extends Component {
                 </Row>
             </div>
         )
+    }
+
+    // 渲染 目录 结构
+    renderCatalogue = () => {
+        // 生成目录
+        let catalogueItems = document.getElementsByClassName('v-title')
+        let catalogue = []
+        for (let i =0;i<catalogueItems.length; i++) {
+            let item = catalogueItems[i]
+        // for (let item of catalogueItems) {
+            let res = item.className.split(' ').filter((item) => {
+                return item.search('title-level-') !== -1
+            })
+            let levelClassName = res[0]
+            let level = Number(levelClassName.charAt(levelClassName.length - 1))
+            let text = item.innerText
+            let id = item.id
+            let active = i == 0 ? true : false
+            catalogue.push({level, text, marginLeft: 0, id, active})
+        }
+        catalogue = this.calcCatalogueItemMarginLeft(catalogue)
+        return {
+            catalogue, 
+            catalogueItems
+        }
+    }
+
+    calcCatalogueItemMarginLeft = (catalogue) => {
+        // 标题offset计算算法 O(n^2)
+        // 每一位向前扫描，
+        // 如果有相同的；那么 同步margin。
+        // 如果没有相同；
+        // 若新level最小或中等，将所有 level > 新 level 的 margin + 1
+        // 若新level最大，拿当前level最大的 margin + 1
+        let len = catalogue.length
+        let biggestLevelPair =  {
+            level: -1,
+            marginLeft: 0
+        }
+        for (let i = 0; i < len; i++) {
+            let newItem = catalogue[i]
+            if (i !== 0) {
+                for (let j = 0; j < i; j++) {
+                    let compareItem = catalogue[j]
+                    if (newItem.level === compareItem.level) {
+                        newItem.marginLeft = compareItem.marginLeft
+                        catalogue[i] = newItem
+                        break
+                    } else if (newItem.level < compareItem.level) {
+                        compareItem.marginLeft += 1
+                        catalogue[j]= compareItem
+                    }
+                }
+            }
+            if (newItem.level > biggestLevelPair.level) {
+                if (biggestLevelPair.level != -1) {
+                    newItem.marginLeft = biggestLevelPair.marginLeft + 1
+                }
+                biggestLevelPair = {
+                    level: newItem.level,
+                    marginLeft: newItem.marginLeft
+                }
+            }
+            catalogue[i] = newItem
+        }
+        return catalogue
     }
 }
 
