@@ -110,7 +110,7 @@ const code = (block) => {
         }     
     }
     // TODO 这里如何做到局部高亮？代码的局部高亮很重要！
-    return <div>
+    return <div style={{margin: '10px 0 10px 0'}}>
             <div style={{
                 width: '120%',
                 padding: '8px 16px 8px 16px',

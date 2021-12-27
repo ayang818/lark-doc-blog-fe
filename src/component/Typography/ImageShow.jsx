@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-
+import { backendAddress } from '../../config'
 
 export default class ImageShow extends Component {
 
@@ -20,7 +20,7 @@ export default class ImageShow extends Component {
 
     openBigImage = (e) => {
         const {width, height, fileToken} = this.props
-        window.open(`http://localhost:5000/download/${fileToken}`)
+        window.open(`${backendAddress}/download/${fileToken}`)
     }
 
     onErrorReload = (e) => {
@@ -45,7 +45,7 @@ export default class ImageShow extends Component {
                     // width: `${width}px`,
                     // height: `${height}px`
                     width: '100%'
-                }} src={`http://localhost:5000/download/${fileToken}`}
+                }} src={`${backendAddress}/download/${fileToken}`}
                 onError={this.onErrorReload}></img>
             </div>
         )

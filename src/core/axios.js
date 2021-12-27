@@ -1,6 +1,7 @@
 import axios from "axios"
+import {backendAddress} from '../config'
 
-axios.defaults.baseURL = 'http://localhost:5000'
+axios.defaults.baseURL = backendAddress
 axios.defaults.timeout = 10000
 // // customer header
 // axios.defaults.headers['custom-defined-header-key'] = 'custom-defined-header-value'

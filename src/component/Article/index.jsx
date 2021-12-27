@@ -83,7 +83,7 @@ class Article extends Component {
             this.getDocContent(wikiToken)
         }
         let {catalogue, catalogueItems:catalogueDom} = this.renderCatalogue()
-        // 不通过 setState 下传
+        // 不通过 setState 下传，通过 PubSub 解耦
         PubSub.publish(articleTopic, {
             catalogue,
             catalogueDom
@@ -98,7 +98,7 @@ class Article extends Component {
         document.body.style.background = 'rgba(var(--semi-grey-0), 1)'
         document.body.style.overflowX = 'hidden'
         const { Text } = Typography
-        const {titleVdom, bodyVdom, wikiToken, catalogue} = this.state
+        const {titleVdom, bodyVdom, wikiToken} = this.state
         return (
             <div >
                 <Row gutter={{xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24}}>

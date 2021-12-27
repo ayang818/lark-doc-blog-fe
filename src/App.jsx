@@ -4,7 +4,7 @@ import Article from './component/Article'
 import BlogIndex from './page/BlogIndex'
 import { Layout } from '@douyinfe/semi-ui'
 import BlogNav from './component/BlogNav'
-
+import { defaultWikiToken } from './config'
 
 export default class LarkDocBlogApp extends Component {
     state = {
@@ -31,7 +31,7 @@ export default class LarkDocBlogApp extends Component {
                         <BlogNav changeShowMode={this.changeShowMode} isLight={this.state.isLight}></BlogNav>
                     </Header>
                     <Routes>
-                        <Route path='' element={<Article wikiToken={'wikcnojbE0C0j2C8tNgKdjOBqRh'} direct={true}></Article>}></Route>
+                        <Route path='' element={<Article wikiToken={defaultWikiToken} direct={true}></Article>}></Route>
                         <Route path='blog' element={<BlogIndex></BlogIndex>}></Route>
                         <Route path='article/:wikiToken' element={<Article></Article>}></Route>
                     </Routes>
