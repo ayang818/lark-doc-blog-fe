@@ -95,10 +95,10 @@ const styleTypeParserDict = {
                 childrenText = vdom.props.children
             }
             let className
-            if (type == 'bullet') {
+            if (type === 'bullet') {
                 newChildren = `${space}o ${childrenText}`
                 className = 'ul-item'
-            } else if (type == 'number') {
+            } else if (type === 'number') {
                 newChildren = `${space}${String(number)}. ${childrenText}`
                 className = 'ul-item'
             }

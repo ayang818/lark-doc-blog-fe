@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Article from './component/Article'
 import BlogIndex from './page/BlogIndex'
 import { Layout } from '@douyinfe/semi-ui'
@@ -23,7 +23,7 @@ export default class LarkDocBlogApp extends Component {
     }
 
     render() {
-        const { Header, Content, Footer, Sider } = Layout
+        const { Header } = Layout
         return (
             <div>
                 <Layout>

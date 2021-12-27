@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import { Typography } from '@douyinfe/semi-ui'
-import { IconComponentPlaceholderStroked, IconCopy } from '@douyinfe/semi-icons'
+import { IconCopy } from '@douyinfe/semi-icons'
 import ImageShow from '../component/Typography/ImageShow';
 import { styleCaster } from './styleParser';
 import { Prism as CodeBlocks } from 'react-syntax-highlighter';
@@ -8,14 +8,14 @@ import { Notification } from '@douyinfe/semi-ui';
 
 
 // TODO 如何封装一个组件
-const {Text:OLText, Title:OLTitle, Paragraph:OLParagraph} = Typography
+const {Text:OLText, Paragraph:OLParagraph} = Typography
 
 // deprecated: 段落首行 + 空格
-const firstLineSpace = (vdoms) => {
-    if (vdoms.length <= 0) return ''
-    if (vdoms[0].props.className.startsWith('title-')) return ''
-    return '\xa0\xa0\xa0\xa0'
-}
+// const firstLineSpace = (vdoms) => {
+//     if (vdoms.length <= 0) return ''
+//     if (vdoms[0].props.className.startsWith('title-')) return ''
+//     return '\xa0\xa0\xa0\xa0'
+// }
 
 // paragraph block parser
 const paragraph = (block) => {
@@ -46,7 +46,7 @@ const textRun = (block) => {
     // 将所有的空格都换成能 html 能解析的形式，否则多个空格会被解析成一个
     // TODO how to fix it
     // text = String(text).replaceAll(' ', '\xa0')
-    let {styleDict, elementPropsDict} = styleCaster(style)
+    let {styleDict} = styleCaster(style)
     let atomicVDOM = <OLText style={styleDict} key={uuidv4()}>{text}</OLText>
     return atomicVDOM
 }
@@ -54,7 +54,7 @@ const textRun = (block) => {
 // image block parser
 const gallery = (block) => {
     let {gallery:{imageList}} = block
-    if (!imageList || imageList.length == 0) return <div></div>
+    if (!imageList || imageList.length === 0) return <div></div>
     let vdoms = []
     for (let image of imageList) {
         let {fileToken, width, height} = image
@@ -86,7 +86,7 @@ const code = (block) => {
                 let {textRun:{text:plainText}} = elem
                 codeText += plainText
             }
-            if (i != len - 1) {
+            if (i !== len - 1) {
                 codeText += '\n'
             }
         }

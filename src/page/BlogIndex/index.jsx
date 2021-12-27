@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './index.css'
-import { Typography, Row, Col } from '@douyinfe/semi-ui'
+import { Row, Col } from '@douyinfe/semi-ui'
 import ArticlePreview from '../../component/ArticlePreview';
 import { getChildrenOrderedNodes } from '../../api'
 
@@ -29,7 +29,7 @@ export default class BlogIndex extends Component {
     }
 
     render() {
-        const { Text, Title } = Typography;
+        // const { Text, Title } = Typography;
         return (
             <div>
                 <Row gutter={{xs: 24, sm: 24, md: 24, lg: 24, xl: 24, xxl: 24}}>

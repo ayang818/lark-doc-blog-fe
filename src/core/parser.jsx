@@ -6,7 +6,7 @@ import { Typography } from '@douyinfe/semi-ui'
 import { styleCaster } from './styleParser';
 import { parseBlock } from './blockParser';
 
-const {Text:OLText, Title:OLTitle, Paragraph:OLParagraph} = Typography
+const {Title:OLTitle} = Typography
 
 export const parseBody = (all) => {
     let {body} = all
