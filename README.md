@@ -2,8 +2,9 @@
 
 > current version: 0.0.1
 
-> 飞书文档具有非常棒的编辑体验！
-一个开源的飞书文档外站，将飞书知识库（部分）的内容，在自建站点统一展示。
+> 飞书文档具有非常棒的编辑体验！所以有了基于飞书的 OpenApi 做自建站点的想法~ 
+
+OpenLarkDoc 是一个开源的飞书文档外站，将飞书知识库（部分）的内容，在自建站点统一展示。
 
 ## Highlight
 - 兼容大部分飞书文档的格式（暂不支持表格）
@@ -17,10 +18,10 @@
 > 样例：http://www.ayang818.top
 
 - 飞书源文档
-[](assert/lark-codepoem.png)
+![](assert/lark-codepoem.png)
 
 - OpenLarkDoc 渲染
-[](assert/openlarkdoc.png)
+![](assert/openlarkdoc.png)
 
 - 夜间模式
-[](assert/night.png)
+![](assert/night.png)
