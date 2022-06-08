@@ -96,7 +96,7 @@ const styleTypeParserDict = {
             }
             let className
             if (type === 'bullet') {
-                newChildren = `${space}o ${childrenText}`
+                newChildren = `${space}● ${childrenText}`
                 className = 'ul-item'
             } else if (type === 'number') {
                 newChildren = `${space}${String(number)}. ${childrenText}`
